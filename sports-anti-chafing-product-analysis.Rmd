@@ -101,7 +101,7 @@ Lets look at the total number of different ingredients used, the products with t
 # The total lnumber of ingredients is the number of rows from the 
 # dfIngredientDefs table which has all the ingredients listed
 # We could add more later, so not hard coding the values is best...
-echo("The total number of ingredients in " nrow(dfProcuct)," products is: ",nrow(dfIngredientDefs))
+echo("The total number of ingredients in ", nrow(dfProcuct)," products is: ",nrow(dfIngredientDefs))
 
 ```
 
