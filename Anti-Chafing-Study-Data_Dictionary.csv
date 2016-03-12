@@ -1,0 +1,45 @@
+General Notes,
+"There are no ""blank"" values; where no data was entered; the value of ""na"" was assigned. ",
+,
+Ingredients.csv: Assigns Ingredients to Products,
+Column,Definition
+Product_ID,Index value for anti-chafe products from the Product_Rating table
+Ingredient_ID,Index value for anti-chafe ingredient from the Ingredient Defs (Definitions) table
+Common_Ingredient_Name,Standardized ingredient name. Many products use different or alternate names. This provides some commonality.
+Ingredient_Order,Order of the ingredient from the product label. In theory; the first ingredient is the largest component; and listed in decending order
+Ingredient_Name_Listed,If a substitution was made for the common name; the original label ingredient listed is preserved here
+Ingredient_Notes,Any minor notes about an ingredient for informational purposes
+,
+Product_Rating.csv: Table of Products with price and user ratings data,
+Column,Definition
+Product_ID,Index value for the anti-chafe product
+Product,Name of the product that it is being sold under
+Product_Type,Distinguishing between different formulations; viscosity; etc. Creams are thinner like lotions; Ointments are thicker and most likely oil based; solids are very thick that are most likely applied from an applicator; liquids are sprayed or rolled on or rubbed in
+Product_Audiance,"Some products are sold as ""sport"" products marketed specifically for sports use. General products are sold as anti-chafe but not for ""sports"" specifically. Off-Label products were identified in blogs; user forums; or from personal experience as good products ot use for sports; but not marketed as anti-chafe products for sports "
+Product_Audiance_Cat2,"If a product was marketed to ""hikers"" or ""triathlon"" of ""bike"" audiences this was captured. Bike products are meant for use in the ""saddle"" area applied to the groin and biking shorts padding or chamios."
+Product_Specific_Use,Defines what area of the body this product is typically applied
+Product_List_Price_USD,"Cost of the product (list price -- meaning that ""discounts"" or ""specials"" were ignored) in US dollars; 2016"
+Product_Size,"Amount of the product in grams or mililiters. The density of water is 1g/ml. This may or may not be useful because of the nature of the product and how much is actually required in a typical application. One might put more ""lotion"" products on; but rub on a very small amount of a solid product."
+Product_Size_Unit,Units of volume or mass: whether or not the product is mililiters or grams. Fluid Ounces was converted to mililiters for standardization
+Product_Unit_Cost,Cost per gram or mililiter of product. This again may not be useful due to the amount of the product needed
+Reviews,"Number of product reviews. Products that have been on the market longer may have more reviews; or simply popular products to buy and rate. For off-label use it may not have very much use; as most of the reviews are for the intended use; not the ""alternative"" use found"
+Score,"Averge score on a scale of 1-5; the typical rating system found on most sites. No conversion was used for alternate systems; as all products identified were rated on a ""5 star"" system of 1-5 stars"
+Rate_5,"Percentage of ""5-star"" reviews"
+Rate_4,"Percentage of ""4-star"" reviews"
+Rate_3,"Percentage of ""3-star"" reviews"
+Rate_2,"Percentage of ""2-star"" reviews"
+Rate_1,"Percentage of ""1-star"" reviews"
+Product_Rating_Date,Date the product rating was recorded. As time goes on; the number of reviews and user rating changes. This is just to capture the window of time
+Rating_Source,Website or product label that the data was gathered from
+Ingredient_Date,Because product formulations may change; this was the time the information was gathered
+Ingredient_Source,Website for the source of the ingredients. May be from the manufactor website; retailer website; user feedback; or other sources 
+,
+Ingredient_Defs.csv: Table of ingredients; other names used; definitions; information sources,
+Column,Definition
+Ingredient_ID,Index value for anti-chafe Ingredient
+Common_Ingredient_Name,Standardized ingredient name. Many products use different or alternate names. This provides some commonality.
+Ingredient_Alternate_Name,Alternate names found or used. This was helpful in standardizing names when manufatures use different ones meaning the same chemical or ingredient
+Ingredient_Definition,Definition of a product; its use or function to help understand what it is or does
+Ingredient_Definition_Source,Source of the ingredient definition for reference
+Ingredient_Def_Date,Date the information was collected; in case it changes. This is just for citation purposes.
+Ingredient_Chem_Ref,Extra chemical reference website in case more information was desired. Citation was taken at the same time as the Ingredient Definition Date

@@ -1,0 +1,101 @@
+Product_ID,Product,Product_Type,Product_Audiance,Product_Audiance_Cat2,Product_Specific_Use,Product_List_Price_USD,Product_Size,Product_Size_Unit,Product_Unit_Cost,Reviews,Score,Rate_5,Rate_4,Rate_3,Rate_2,Rate_1,Product_Rating_Date,Rating_Source,Ingredient_Date,Ingredient_Source
+1,Body Glide Origional,Solid,Sport,All,General,9.99,36.9,g,0.271,1685,4.53,76,12,5,3,4,2/14/2016,Amazon.com,2/14/2016,Label
+2,Gold Bond Friction Defense,Solid,Sport,All,General,5.99,49.6,g,0.121,341,4.48,73,13,6,5,3,2/14/2016,Amazon.com,2/14/2016,http://www.amazon.com/Gold-Bond-Friction-Defense-Ounce/dp/B007VC9DKI
+3,Skin Stong Slather,Cream,Sport,Run,General,12.99,173,g,0.075,20,4.65,75,15,10,0,0,10/14/2014,Amazon.com,2/14/2016,Label
+4,Brave Soldier Friction Zone,Ointment,Sport,Run; Bike,General,18.00,70,g,0.257,42,4.51,74,12,5,9,0,2/14/2016,Amazon.com,2/14/2016,Label
+5,Trail Toes Foot and Body Cream,Cream,Sport,Run; Hike,Feet,12.99,56,g,0.232,156,4.68,84,7,5,1,3,9/16/2014,Amazon.com,2/14/2016,Label
+6,HikeGoo Blister Prevention Cream (Feet),Cream,Sport,Hike,Feet,17.99,154,g,0.117,124,4.44,73,11,6,7,3,2/14/2016,Amazon.com,2/14/2016,rei.com
+7,RunGoo Blister Prevention Cream,Cream,Sport,Run,Feet,17.99,154,g,0.117,73,4.34,69,12,8,6,5,2/14/2016,Amazon.com,2/14/2016,rei.com
+8,Rocket Pure Friction Therapy Natural Anti-Chafe Balm,Cream,Sport,Triathlon,General,17.99,118,g,0.152,65,4.62,80,12,3,0,5,2/14/2016,http://www.amazon.com/Anti-chafe-Protection-Triathletes-Ingredients-Rocket/dp/B00RKHRUFY,2/14/2016,Amazon.com
+9,Vaseline ,Ointment,General,General,General,3.99,368,g,0.011,524,4.72,83,11,3,1,2,2/14/2016,Amazon.com,2/14/2016,Amazon.com
+10,Chamois Butt'r,Cream,Sport,Bike,Groin,17.99,237,g,0.076,654,4.77,84,12,2,1,1,2/14/2016,Amazon.com,2/14/2016,BikeBling.com
+11,Blue Steel Sports Anti-Chafe Cream,Cream,Sport,Triathlon,General,13.83,100,ml,0.138,154,4.6,77,14,2,5,3,2/16/2016,Amazon.com,2/16/2016,Amazon.com
+12,Lanacane Anti-Chafing Gel,Gel,General,General,General,10.00,28,g,0.357,200,4.62,80,9,7,1,3,2/16/2016,Amazon.com,2/16/2016,Amazon.com
+13,ChafeStop anti-chafing stick,Solid,Sport,Triathlon,General,17.99,56.6,g,0.318,22,4.69,82,9,5,4,0,2/16/2016,Amazon.com,2/16/2016,Amazon.com
+14,2Toms SportShield Liquid Roll-On,Liquid,Sport,Run,General,13.00,45,ml,0.289,172,4.84,86,12,2,0,0,2/16/2016,Amazon.com,2/16/2016,http://www.2toms.com/products-page/sportshield/sportshield-roll-on/
+15,Mission Athletecare 5 Hour Anti-Chafe Cream,Cream,Sport,Run,General,14.43,57,g,0.253,82,4.4,71,14,7,4,0,2/16/2016,Amazon.com,2/16/2016,http://ec2-54-243-178-219.compute-1.amazonaws.com/skindeep/product/525433/MISSION_Athletecare_5_Hour_Anti-Chafe_Cream/
+16,Trislide SBR Anti-Chafe Continuous Spray Lubricant,Liquid,Sport,Triathlon,General,14.96,118,ml,0.127,188,4.58,78,13,1,5,3,2/16/2016,Amazon.com,2/16/2016,http://www.drugstore.com/trislide-aerosol-skin-lubricant/qxp277713
+17,SLIK Anti-Friction and Anti-Chafe Skin Lube,Liquid,Sport,Triathlon,General,15.95,118,ml,0.135,25,4.36,76,4,8,4,8,2/16/2016,Amazon.com,2/16/2016,http://skinstrong.com/slik-anti-chafing-spray/
+18,Gooch Guard Chamois Cream,Cream,Sport,Bike,Groin,22.95,126,ml,0.182,230,4.78,81,17,1,1,0,2/20/2016,Amazon.com,2/20/2016,Amazon.com
+19,Zealios All Natural; Vegan; Betwixt Athletic Skin Lubricant & Chamois Cream,Cream,Sport,Bike,Groin,24.95,237,ml,0.105,23,4.92,96,0,4,0,0,2/20/2016,Amazon.com,2/20/2016,Amazon.com
+20,ChafeZone - Anti-Chafe & Blister Prevention,Solid,Sport,Triathlon,General,9.99,22.4,g,0.446,40,4.41,55,35,8,0,2,2/20/2016,Amazon.com,2/20/2016,http://www.ebay.com/itm/MedZone-ChafeZone-BurnZone-PainZone-LOT-of-20-NEW-First-Aid-Relief-Prevention-/151835007365
+21,Mueller Lube Stick for Runners,Solid,Sport,Run,General,7.64,63,g,0.121,38,4.54,81,8,3,0,8,2/21/2016,Amazon.com,2/21/2016,http://www.amazon.com/Mueller-Lube-Stick-Runners-2-25-Ounce/dp/B000TS8MHG/ref=pd_sim_sg_16
+22,Corona Multi-Purpose Ointment,Ointment,Off-Label,Veterinary,General,15.22,198,g,0.077,160,4.68,85,7,3,1,4,2/21/2016,http://www.amazon.com/Manna-Pro-0095005392-Purpose-Ointment/dp/B003ARD4TE/ref=sr_1_1?ie=UTF8&qid=1456059201&sr=8-1&keywords=Corona+Multi-Purpose+Ointment,2/21/2016,Label
+23,Boudreaux's Butt Paste Diaper Rash Ointment Skin Protectant,Ointment,Off-Label,General,Feet,9.57,113,g,0.085,228,4.55,77,12,4,3,4,2/21/2016,http://www.amazon.com/Boudreauxs-Butt-Paste-Ointment-Protectant/dp/B001190D5Q/ref=sr_1_4?s=baby-products&ie=UTF8&qid=1456060126&sr=1-4&keywords=Butt+Paste,2/21/2016,http://www.buttpaste.com/products/original-butt-paste
+24,Sportslick,Ointment,Sport,General,General,13.49,106.4,g,0.127,38,4.75,84,10,3,3,0,2/21/2016,http://www.amazon.com/Sportslick-3-8-oz/dp/B0007OC0A2/ref=sr_1_1?ie=UTF8&qid=1456061443&sr=8-1&keywords=sportslick,2/21/2016,http://www.allstarhealth.com/de_p/14001/Sportslick_The_Ultimate_Skin_Protector.htm
+25,Ruby's Lube - All Natural Anti-Chafe Balm,Ointment,Sport,General,General,17.99,85,g,0.212,24,4.59,79,9,8,0,4,2/21/2016,http://www.amazon.com/Rubys-Lube-Natural-Anti-Chafe-Balm/dp/B00MH7G8GO/ref=sr_1_15?ie=UTF8&qid=1456078186,2/21/2016,http://www.amazon.com/Rubys-Lube-Natural-Anti-Chafe-Balm/dp/B00MH7G8GO/ref=sr_1_15?ie=UTF8&qid=1456078186
+26,Bodyglide Skin Glide Anti-Friction Balm,Ointment,Sport,General,General,9.99,45.36,g,0.220,119,3.97,53,17,13,8,9,2/21/2016,http://www.amazon.com/Bodyglide-Skin-Glide-Anti-Friction-Ounce/dp/B0031Y4S0U/ref=sr_1_2?ie=UTF8&qid=1456079038,2/21/2016,https://www.bodyglide.com/shop/skin/
+27,Reflect Sports Hoo Ha Ride Glide,Cream,Sport,Bike,Groin,21.95,236.6,ml,0.093,91,4.42,74,13,2,3,8,2/21/2016,http://www.amazon.com/Reflect-Sports-Ride-Glide-8-Ounce/dp/B009NN2O86,2/21/2016,http://www.amazon.com/forum/-/Tx3RL6DD7J0OV22/ref=ask_dp_dpmw_al_hza?asin=B009NN2O86
+28,Aquaphor (Baby),Ointment,Off-Label,General,General,10.75,85,g,0.126,331,4.68,83,9,4,1,3,2/21/2016,http://www.amazon.com/Aquaphor-Healing-Ointment-Diaper-Protectant/dp/B001F0RAVQ/ref=sr_1_5?ie=UTF8&qid=1456089783,2/21/2016,http://www.amazon.com/Aquaphor-Healing-Ointment-Diaper-Protectant/dp/B001F0RAVQ/ref=sr_1_5?ie=UTF8&qid=1456089783
+29,Surf Butta Anti-Chafe Balm,Solid,Sport,General,General,16.99,70,g,0.243,14,4.93,93,7,0,0,0,2/21/2016,http://www.amazon.com/Surf-Butta-Anti-Chafe-Balm-Eliminates/dp/B017HUPINY/ref=sr_1_9?s=sporting-goods&ie=UTF8&qid=1456090069,2/21/2016,http://www.amazon.com/Surf-Butta-Anti-Chafe-Balm-Eliminates/dp/B017HUPINY/ref=sr_1_9?s=sporting-goods&ie=UTF8&qid=1456090069
+30,Chamois Butt'r GoStik Skin Lubricant,Solid,Sport,Triathlon,General,14.99,70,g,0.214,57,4.65,72,23,3,2,0,2/21/2016,http://www.amazon.com/Chamois-Buttr-GoStik-Lubricant-2-5-Ounce/dp/B00M8YXR74/ref=sr_1_18?s=sporting-goods&ie=UTF8&qid=1456090069,2/21/2016,http://www.amazon.com/Chamois-Buttr-GoStik-Lubricant-2-5-Ounce/dp/B00M8YXR74%3FSubscriptionId%3DAKIAJ7ULU7QZXKP7GIOQ%26tag%3Dhomea0c-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3DB00M8YXR74
+31,Dead Down Wind Anti-Chafe + Anti-Itch Lotion,Liquid,Sport,General,General,12.94,118,ml,0.110,1,0.05,1,0,0,0,0,2/21/2016,http://www.amazon.com/Dead-Down-Wind-Anti-Chafe-Anti-Itch/dp/B00OH5LVLQ/ref=sr_1_1?ie=UTF8&qid=1456091893,2/21/2016,http://www.amazon.com/Dead-Down-Wind-Anti-Chafe-Anti-Itch/dp/B00OH5LVLQ/ref=sr_1_1?ie=UTF8&qid=1456091893
+32,That Butt Stuff Anti Chafing Cream - Natural Chamois Balm,Cream,Sport,Bike,Groin,16.00,168,g,0.095,31,4.35,77,0,10,7,6,2/21/2016,http://www.amazon.com/Anti-Chafing-Cream-Natural-Chamois/dp/B002TIIGIO/ref=sr_1_31?s=sporting-goods&ie=UTF8&qid=1456107746,2/21/2016,http://www.amazon.com/Anti-Chafing-Cream-Natural-Chamois/dp/B002TIIGIO/ref=sr_1_31?s=sporting-goods&ie=UTF8&qid=1456107746
+33,Petal Power Joy Ride Cream,Cream,Sport,Bike,Groin,19.95,118,ml,0.169,21,4.76,81,14,5,0,0,2/21/2016,http://www.amazon.com/dp/B00PM94YC4?psc=1 PRICE information from manufactor website http://www.petal-power.com/store/p2/Petal_Power_Joy_Ride_Creme.html,2/21/2016,http://www.petal-power.com/our-ingredients.html
+34,DZ Nuts Pro Chamois Cream,Cream,Sport,Bike,Groin,24.00,120,ml,0.200,229,4.66,80,12,4,2,2,2/21/2016,http://www.amazon.com/DZ-Nuts-Pro-Chamois-Cream/dp/B008F9J16M/ref=pd_sbs_468_5?ie=UTF8&dpID=31ai7kgn6oL&dpSrc=sims&preST=_AC_UL160_SR160%2C160_&refRID=1RF8866Y6MXDJFBDEJ84,2/21/2016,http://www.amazon.com/forum/-/Tx4H8S2UKHM9D2/-/ref=ask_dp_lsw_al_hza?asin=B001C6DIF0  http://www.competitivecyclist.com/dz-nuts-pro-chamios-cream-mens
+35,Soigneur Chamois Cream - Tempo,Cream,Sport,Bike,Groin,14.99,120,ml,0.125,1,5,100,0,0,0,0,2/25/2016,http://www.amazon.com/Soigneur-Tempo-Chamois-Cream/dp/B009FPGHN0/ref=sr_1_1?ie=UTF8&qid=1456200002,2/25/2016,http://www.soigneur.net/shop/chamois-cream-1
+36,Beach Gladiator Anti-Chafe Roll-On Rash Guard for Beach/Surf Rash,Liquid,Sport,General,General,14.99,45,ml,0.333,6,5,100,0,0,0,0,2/25/2016,http://www.amazon.com/Beach-Gladiator-Anti-Chafe-Roll--Guard/dp/B00RPOQMEC,2/25/2016,http://www.amazon.com/Beach-Gladiator-Anti-Chafe-Roll--Guard/dp/B00RPOQMEC
+37,Monistat Soothing Care Chafing Relief Powder-Gel,Gel,General,General,General,18.70,42,g,0.445,471,4.65,78,15,3,2,2,2/25/2016,http://www.amazon.com/Monistat-Soothing-Chafing-Powder-Gel-1-5-Ounce/dp/B0012ZNSWE,2/25/2016,http://www.amazon.com/Monistat-Soothing-Chafing-Powder-Gel-1-5-Ounce/dp/B0012ZNSWE
+38,Assos Chamois Cream,Cream,Sport,Bike,Groin,26.00,132,g,0.197,171,4.77,84,12,2,1,1,2/25/2016,http://www.amazon.com/Assos-Chamois-Cream-4-73-oz/dp/B001O19E2E,2/25/2016,http://www.amazon.com/Assos-Chamois-Cream-4-73-oz/dp/B001O19E2E
+39,Udderly Smooth Chamois Cream with Shea Butter,Cream,Sport,Bike,Groin,11.98,448,g,0.027,32,4.12,56,22,6,10,6,2/25/2016,http://www.amazon.com/Udderly-Smooth-Chamois-Cream-Butter/dp/B00D86VJD0,2/25/2016,http://www.amazon.com/Udderly-Smooth-Chamois-Cream-Butter/dp/B00D86VJD0
+40,Moraz Redskin - Polygonum Anti Chafe Cream,Cream,Sport,General,General,33.98,100,ml,0.340,3,4.01,67,0,0,33,0,2/25/2016,http://www.amazon.com/dp/B001KYVWQG?psc=1,2/25/2016,http://www.amazon.com/dp/B001KYVWQG?psc=1
+41,Bag-Balm; Vermonts Original Moisturizing & Softening Ointment,Ointment,Off-Label,Veterinary,General,14.75,224,g,0.066,737,4.71,82,11,4,2,1,2/26/2016,http://www.amazon.com/Bag-Balm-Vermonts-Original-Moisturizing-Softening/dp/B0014CI4X8,,
+42,Doc's Skin Care Chamois Cream,Cream,Sport,Bike,Groin,20.95,236.5,ml,0.089,86,4.7,83,8,6,2,1,2/26/2016,http://www.amazon.com/Docs-Skin-Care-Chamois-Cream/dp/B00EOUTNPA,2/26/2016,http://docsskincare.com/products/chamois-cream/
+43,Hammer Nutrition Seat Saver Chamois And Anti- Chafing Cream,Cream,Sport,Bike,Groin,12.95,56,g,0.231,4,4.25,75,0,0,25,0,2/26/2016,http://www.amazon.com/Hammer-Nutrition-Saver-Chamois-Chafing/dp/B002K69HSI/,2/26/2016,http://www.hammernutrition.com/products/seat-saver.ssv.html
+44,RunGuard Anti-Chafe Stick ,Solid,Sport,General,General,10.00,76,g,0.132,4,4,25,50,25,0,0,2/26/2016,https://www.google.com/shopping/product/4682990999738067527?q=RunGuard+Anti-Chafe&biw=1192&bih=578&bav=on.2;or.r_cp.&bvm=bv.115339255;d.dmo&tch=1&ech=1&psi=pSzRVtiUAcHxeq6olYgH.1456549138121.9&prds=hsec:reviews;paur:ClkAsKraX_JVZz_TOWlQw69jyl1NsFlF2fJED_TB-hXY0Ys4Ufb3VKbRAncj0n_e6kKDkYTBLlJNxS4V-4lKNaAn68oW1iNyTRR0HzndpgfJRZ2Ppr8O50f6xxIZAFPVH70i1tOHBnSoJG3SX9zlZEkaNSfmTQ&ved=0ahUKEwjivqvilJfLAhVHGB4KHX1fB_AQqisIFQ&ei=fC3RVuKQBseweP2-nYAP,2/26/2016,http://www.runguards.com/products/runguard-original/ingredients
+45,Fresh Balls,Cream,Sport,General,Groin,11.05,148,ml,0.075,255,4.44,73,11,8,3,5,2/26/2016,http://www.amazon.com/Fresh-Balls-Oz-Tube-Pack/dp/B00D3LTEVE/#customerReviews,2/26/2016,http://www.amazon.com/Fresh-Balls-Oz-Tube-Pack/dp/B00D3LTEVE/#customerReviews
+46,Akileïne Sports NOK Anti-chafing Cream,Cream,Sport,General,General,17.85,75,ml,0.238,10,4.9,90,10,0,0,0,2/26/2016,http://www.amazon.com/Akile%C3%AFne-Sports-Anti-chafing-Cream-75ml/dp/B0070X231Y; http://www.mec.ca/product/5009-478/sports-akileine-anti-friction-nok-cream-75ml/,2/26/2016,http://www.cocooncenter.co.uk/akileine-sports-nok-anti-chafing-cream-75ml/8534.html#composition
+47,Shea Butter Market SPLAX Anti‑Chafing Stick,Solid,Sport,Triathlon,General,7.96,60,ml,0.133,15,3.68,47,20,0,20,13,2/26/2016,http://www.mec.ca/product/5014-984/shea-butter-market-splax-anti-chafing-stick-60g/,2/26/2016,http://www.artisancraftedbodycare.com/shea-butter-market-splax-anti-chafing-stick
+48,Miracle of Aloe Chafe Guard Anti Friction Stick,Cream,General,General,General,7.99,28,g,0.285,6,3.51,50,0,17,17,16,2/26/2016,http://www.amazon.com/Miracle-Aloe-Lubricants-Eliminates-Comfortable/dp/B002FPBPOI,2/26/2016,http://www.miracleofaloe.com/personal-care/problem-solvers/chafe-guard.html
+49,Uberlube Luxury Lubricant,Liquid,General,General,General,28.46,100,ml,0.285,225,4.84,87,7,3,3,6,2/26/2016,http://www.amazon.com/Uberlube-UBER-100-Luxury-Lubricant-100ml/dp/B00502KJ2C,2/26/2016,http://www.amazon.com/Uberlube-UBER-100-Luxury-Lubricant-100ml/dp/B00502KJ2C
+50,GurneyGoo Lubricant,Ointment,Sport,General ,General,19.90,85,ml,0.234,3,5,100,0,0,0,0,2/28/2016,http://www.amazon.com/GurneyGears-GurneyGoo-Anti-Chafe-85ml/dp/B00SQ1DQY2,2/28/2016,http://www.amazon.com/GurneyGears-GurneyGoo-Anti-Chafe-85ml/dp/B00SQ1DQY2
+51,Desitin Maximum Strength Paste,Cream,Off-Label,General,Feet,12.79,226,g,0.057,286,4.58,77,12,6,2,3,2/28/2016,http://www.amazon.com/dp/B003O32P8U/,2/28/2016,https://www.desitin.com/diaper-rash-products/maximum-strength-original-zinc-oxide-paste
+52,Hipoglos 4.2 Oz Baby Diaper Rash Cream And Skin Protectant,Cream,Off-Label,General,Feet,12.99,120,g,0.108,12,4.76,84,8,8,0,0,2/28/2016,http://www.amazon.com/Hipoglos-Baby-Diaper-Cream-Protectant/dp/B004DAQWAK,2/28/2016,http://dailymed.nlm.nih.gov/dailymed/archives/fdaDrugInfo.cfm?archiveid=42792
+53,Cramer Skin Lube,Ointment,Sport,Triathlon,General,18.00,78,g,0.231,10,4.7,80,10,10,0,0,2/28/2016,http://www.amazon.com/Cramer-Legendary-Lubricant-Marathons-Triathlons/dp/B0002V8R70,2/28/2016,http://www.ebay.com/itm/NEW-Cramer-Skin-Lube-Pro-Strength-Lubricating-Ointment-1-Lb-Tub-192538-Chafing-/181714844162?hash=item2a4f0c7a02:g:lOMAAOSwNSxVKdu5
+54,Waxelene Petroleum Jelly Alternative,Ointment,General,General,General,14.40,257,g,0.056,393,4.61,79,12,4,1,4,2/28/2016,http://www.amazon.com/Waxelene-Petroleum-Jelly-Alternative-9-Ounce/dp/B00D3PMP20/,2/28/2016,http://www.amazon.com/forum/-/Tx2LNYLMMZS5CUQ/-/ref=ask_dp_lsw_al_hza?asin=B00D3PMP20
+55,Band-Aid Friction Blister Block Stick,Ointment,General,General,Feet,7.59,9.6,g,0.791,128,4.33,70,13,6,2,9,2/28/2016,http://www.amazon.com/Band-Aid-Friction-Blister-Block-Stick/dp/B00166FZBG/,2/28/2016,http://www.amazon.com/Band-Aid-Friction-Blister-Block-Stick/dp/B00166FZBG/
+56,ChafeX Anti-Chafing Skin Cream,Cream,Sport,General,General,12.99,50,g,0.260,3,5,100,0,0,0,0,3/2/2016,http://www.amazon.com/gp/product/B00TT3KRMK/,3/2/2016,http://www.amazon.com/forum/-/Tx2QO7ANIQVQO8C/ref=ask_dp_dpmw_al_hza?asin=B00TT3KRMK
+57,Neat Feat 3B Body Saver Skin Chafing Antiperspirant Cream,Cream,Sport,General ,General,14.25,75,g,0.190,7,4.72,86,0,14,0,0,3/5/2016,http://www.amazon.com/Neat-Saver-Chafing-Antiperspirant-Ounces/dp/B00B5MPCWI,3/5/2016,http://www.amazon.com/Neat-Saver-Chafing-Antiperspirant-Ounces/dp/B00B5MPCWI
+58,Neat 3B Action Cream,Cream,Sport,General,General,12.10,75,g,0.161,33,4.67,85,6,3,3,3,3/5/2016,http://www.amazon.co.uk/dp/B001D8D7D0,3/5/2016,http://www.amazon.co.uk/dp/B001D8D7D0
+59,3M Cavilon Durable Barrier Cream Fragrance Free,Cream,General,General ,General,14.69,184,g,0.080,64,4.73,82,15,0,0,3,3/5/2016,http://www.amazon.com/3M-Cavilon-Durable-Barrier-Fragrance/dp/B00CYPUUYK,3/5/2016,http://solutions.3m.co.uk/wps/portal/3M/en_GB/Cavilon/skin-care/products/durable-barrier-cream/
+60,Avon basics silicone glove hand cream,Cream,Off-Label,General,General,6.99,100,ml,0.070,23,4.83,87,9,4,0,0,3/5/2016,http://www.amazon.com/basics-silicone-glove-cream-3-4fl/dp/B0014HG8W2/,3/5/2016,https://www.avon.com/product/41894/avon-care-silicone-glove-protective-hand-cream?setlang=en
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,
+,,,,,,,,,#DIV/0!,,#DIV/0!,,,,,,,,,

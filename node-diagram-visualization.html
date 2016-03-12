@@ -1145,8 +1145,8 @@ var nodes = [
 ];
 
 
-var width = 800,
-    height = 600;
+var width = 1200,
+    height = 800;
 var color = d3.scale.category20();
 var svg = d3.select("body").append("svg")
     .attr("width", width)
@@ -1156,7 +1156,7 @@ var force = d3.layout.force()
     .links(links)
     .size([width, height])
     .charge(-600)
-    .linkDistance(150)
+    .linkDistance(100)
     .start();
     
 // build the arrow.
