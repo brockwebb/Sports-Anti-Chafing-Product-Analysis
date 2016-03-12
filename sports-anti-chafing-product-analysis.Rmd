@@ -53,7 +53,7 @@ library(lubridate); library(ggplot2); library(plyr); library(grid); library(nort
 ```
 
 ## Global Functions
-None defined yet.
+None defined yet. Keeping for now.
 
 ## Loading the Data Files
 All the data files used, including this R-Markdown file with complete source code is available from the github repository at: https://github.com/brockwebb/Sports-Anti-Chafing-Product-Analysis/tree/master/data
