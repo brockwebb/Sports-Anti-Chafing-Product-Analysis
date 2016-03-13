@@ -35,9 +35,10 @@ The following libraries are used in this analysis:
 3. lubridate -- handling date/time
 4. knitr -- knitr global options for output/file build
 5. nortest -- normality testing  
-6. plyr -- summarization/aggregation 
+6. plyr -- summarization/aggregation
+7. stargazer -- making pretty table outputs easy
 ```{r}
-library(lubridate); library(ggplot2); library(plyr); library(grid); library(nortest)
+library(lubridate); library(ggplot2); library(plyr); library(grid); library(nortest); library(stargazer)
 ```
 
 ## Global Functions
@@ -75,7 +76,7 @@ dfTopTenIngredients <- as.data.frame(table(dfMergeProductIngredient$Common_Ingre
 colnames(dfTopTenIngredients) <- c("Ingredient","Product_Count")
 dfTopTenIngredients$Product_Percent <- round(dfTopTenIngredients$Product_Count/nrow(dfProduct) * 100, digits=1)
 dfTopTenIngredients <- dfTopTenIngredients[order(-dfTopTenIngredients$Product_Count),]
-head(dfTopTenIngredients,10)  # Display top 10
+stargazer(head(dfTopTenIngredients,10), type="text", summary=FALSE, rownames=FALSE)  # Display top 10
 ```
 
 Lets look at the total number of different ingredients used, the products with the most and least number of ingredients, and the overall average number of ingredients used with all products.
@@ -84,18 +85,27 @@ Lets look at the total number of different ingredients used, the products with t
 # The total lnumber of ingredients is the number of rows from the 
 # dfIngredientDefs table which has all the ingredients listed
 # We could add more later, so not hard coding the values is best...
-cat("The total number of ingredients in ", nrow(dfProduct)," products is: ",nrow(dfIngredientDefs))
+```
+The total number of ingredients in `r nrow(dfProduct)` products is: `r nrow(dfIngredientDefs)`
 
+```{r}
 # In the merged dataset, since the products are repeated next to each 
 # ingredient in it, we can grab the array of the product names 
 # and do the counts as the number of ingredients (this is a simple way)
 dfProductCounts <- as.data.frame(table(dfMergeProductIngredient$Product))
 colnames(dfProductCounts) <- c("Product","Number_of_Ingredients")
 dfProductCounts <- dfProductCounts[order(-dfProductCounts$Number_of_Ingredients),]
-cat("The top five products with the most ingredients are: (last two are a tie)")
-head(dfProductCounts,6)  # Display top 5 (#5 and #6 are ties)
-cat("The five products with the least number of ingredients are three or less:")
-tail(dfProductCounts,5)  # Display bottom 5
+```
+
+The top five products with the most ingredients are (last two are a tie):
+
+```{r}
+stargazer(head(dfProductCounts,6), type="text", summary=FALSE, rownames=FALSE)  # Display top 5 (#5 and #6 are ties)
+```
+
+The five products with the least number of ingredients (which is three or less):
+```{r}
+stargazer(tail(dfProductCounts,5),type="text", summary=FALSE, rownames=FALSE)  # Display bottom 5
 ```
 
 
