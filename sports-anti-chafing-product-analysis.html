@@ -150,45 +150,152 @@ $(document).ready(function () {
 <h1>Exploritory Analysis</h1>
 <p>Let’s look at the top ten most common ingredients:</p>
 <pre><code>## 
-## % Table created by stargazer v.5.2 by Marek Hlavac, Harvard University. E-mail: hlavac at fas.harvard.edu
-## % Date and time: Sun, Mar 13, 2016 - 01:43:38
-## \begin{table}[!htbp] \centering 
-##   \caption{} 
-##   \label{} 
-## \begin{tabular}{@{\extracolsep{5pt}}lccccc} 
-## \\[-1.8ex]\hline 
-## \hline \\[-1.8ex] 
-## Statistic &amp; \multicolumn{1}{c}{N} &amp; \multicolumn{1}{c}{Mean} &amp; \multicolumn{1}{c}{St. Dev.} &amp; \multicolumn{1}{c}{Min} &amp; \multicolumn{1}{c}{Max} \\ 
-## \hline \\[-1.8ex] 
-## Product\_Count &amp; 10 &amp; 18.700 &amp; 5.293 &amp; 14 &amp; 28 \\ 
-## Product\_Percent &amp; 10 &amp; 31.170 &amp; 8.824 &amp; 23.300 &amp; 46.700 \\ 
-## \hline \\[-1.8ex] 
-## \end{tabular} 
-## \end{table}</code></pre>
+## ==============================================
+## Ingredient       Product_Count Product_Percent
+## ----------------------------------------------
+## Vitamin E             28             47       
+## Water                 27             45       
+## Dimethicone           23             38       
+## Cetearyl Alcohol      18             30       
+## Mineral Oil           16             27       
+## Petrolatum            16             27       
+## Aloe Vera             15             25       
+## Glycerin              15             25       
+## Phenoxyethanol        15             25       
+## Tea Tree Oil          14             23       
+## ----------------------------------------------</code></pre>
 <p>Lets look at the total number of different ingredients used, the products with the most and least number of ingredients, and the overall average number of ingredients used with all products.</p>
-<pre><code>## The total number of ingredients in  60  products is:  267</code></pre>
-<pre><code>## The top five products with the most ingredients are: (last two are a tie)</code></pre>
-<pre><code>##                                        Product Number_of_Ingredients
-## 35 Mission Athletecare 5 Hour Anti-Chafe Cream                    37
-## 25                   DZ Nuts Pro Chamois Cream                    35
-## 42            Reflect Sports Hoo Ha Ride Glide                    33
-## 3       Akileïne Sports NOK Anti-chafing Cream                    30
-## 41                  Petal Power Joy Ride Cream                    28
-## 48                          Skin Stong Slather                    28</code></pre>
-<pre><code>## The five products with the least number of ingredients are three or less:</code></pre>
-<pre><code>##                                                              Product
-## 1                                   2Toms SportShield Liquid Roll-On
-## 7      Bag-Balm; Vermonts Original Moisturizing &amp; Softening Ointment
-## 8                              Band-Aid Friction Blister Block Stick
-## 9  Beach Gladiator Anti-Chafe Roll-On Rash Guard for Beach/Surf Rash
-## 58                                                         Vaseline 
-##    Number_of_Ingredients
-## 1                      3
-## 7                      3
-## 8                      3
-## 9                      3
-## 58                     1</code></pre>
+<p>The total number of ingredients in 60 products is: 267</p>
+<p>The top five products with the most ingredients are (last two are a tie):</p>
+<pre><code>## 
+## =================================================================
+## Product                                     Number_of_Ingredients
+## -----------------------------------------------------------------
+## Mission Athletecare 5 Hour Anti-Chafe Cream          37          
+## DZ Nuts Pro Chamois Cream                            35          
+## Reflect Sports Hoo Ha Ride Glide                     33          
+## Akileïne Sports NOK Anti-chafing Cream               30          
+## Petal Power Joy Ride Cream                           28          
+## Skin Stong Slather                                   28          
+## -----------------------------------------------------------------</code></pre>
+<p>The five products with the least number of ingredients (which is three or less):</p>
+<pre><code>## 
+## =======================================================================================
+## Product                                                           Number_of_Ingredients
+## ---------------------------------------------------------------------------------------
+## 2Toms SportShield Liquid Roll-On                                            3          
+## Bag-Balm; Vermonts Original Moisturizing and Softening Ointment             3          
+## Band-Aid Friction Blister Block Stick                                       3          
+## Beach Gladiator Anti-Chafe Roll-On Rash Guard for Beach/Surf Rash           3          
+## Vaseline                                                                    1          
+## ---------------------------------------------------------------------------------------</code></pre>
+<p>Now let’s look at the top rated products, and include the number of reviews:</p>
+<pre><code>## 
+## ===========================================================================================
+## Product                                                                       Reviews Score
+## -------------------------------------------------------------------------------------------
+## Soigneur Chamois Cream - Tempo                                                   1      5  
+## Beach Gladiator Anti-Chafe Roll-On Rash Guard for Beach/Surf Rash                6      5  
+## GurneyGoo Lubricant                                                              3      5  
+## ChafeX Anti-Chafing Skin Cream                                                   3      5  
+## Surf Butta Anti-Chafe Balm                                                      14    4.93 
+## Zealios All Natural; Vegan; Betwixt Athletic Skin Lubricant and Chamois Cream   23    4.92 
+## Akileïne Sports NOK Anti-chafing Cream                                          10    4.90 
+## 2Toms SportShield Liquid Roll-On                                                172   4.84 
+## Uberlube Luxury Lubricant                                                       225   4.84 
+## Avon basics silicone glove hand cream                                           23    4.83 
+## -------------------------------------------------------------------------------------------</code></pre>
+<p>Some of the top rated products do not have many reviews, meaning that there could be a lot of bias becuase there is not enough information. So, we will only take the top products with more than 10 reviews.</p>
+<pre><code>## 
+## ===========================================================================================
+## Product                                                                       Reviews Score
+## -------------------------------------------------------------------------------------------
+## Surf Butta Anti-Chafe Balm                                                      14    4.93 
+## Zealios All Natural; Vegan; Betwixt Athletic Skin Lubricant and Chamois Cream   23    4.92 
+## Akileïne Sports NOK Anti-chafing Cream                                          10    4.90 
+## 2Toms SportShield Liquid Roll-On                                                172   4.84 
+## Uberlube Luxury Lubricant                                                       225   4.84 
+## Avon basics silicone glove hand cream                                           23    4.83 
+## Gooch Guard Chamois Cream                                                       230   4.78 
+## Chamois Butt'r                                                                  654   4.77 
+## Assos Chamois Cream                                                             171   4.77 
+## Petal Power Joy Ride Cream                                                      21    4.76 
+## -------------------------------------------------------------------------------------------</code></pre>
+<p>That changes things a bit, and gives us greater confidence based on a larger number of user experiences. Because one focus of this analysis is looking at running products, we’ll remove the biking and “off-label” ones, and focus on products that have reviews for “sport” use:</p>
+<pre><code>## 
+## ====================================================
+## Product                                Reviews Score
+## ----------------------------------------------------
+## Surf Butta Anti-Chafe Balm               14    4.93 
+## Akileïne Sports NOK Anti-chafing Cream   10    4.90 
+## 2Toms SportShield Liquid Roll-On         172   4.84 
+## Sportslick                               38    4.75 
+## Cramer Skin Lube                         10    4.70 
+## ChafeStop anti-chafing stick             22    4.69 
+## Trail Toes Foot and Body Cream           156   4.68 
+## Neat 3B Action Cream                     33    4.67 
+## Skin Stong Slather                       20    4.65 
+## Chamois Butt'r GoStik Skin Lubricant     57    4.65 
+## ----------------------------------------------------</code></pre>
+<p>Finially, let’s look at products for “general” use and then products specifically advertised for use on the feet. We’ll add the product unit cost, but be advised that a little BodyGlide goes a long way, so how much is used per application is different depending on the product. Starting with “general use” products that are advertized for “sports” use first:</p>
+<pre><code>## 
+## ======================================================================================================
+## Product                                              Reviews Score Product_Unit_Cost Product_Size_Unit
+## ------------------------------------------------------------------------------------------------------
+## Surf Butta Anti-Chafe Balm                             14    4.93        0.24                g        
+## Akileïne Sports NOK Anti-chafing Cream                 10    4.90        0.24               ml        
+## 2Toms SportShield Liquid Roll-On                       172   4.84        0.29               ml        
+## Sportslick                                             38    4.75        0.13                g        
+## Cramer Skin Lube                                       10    4.70        0.23                g        
+## ChafeStop anti-chafing stick                           22    4.69        0.32                g        
+## Neat 3B Action Cream                                   33    4.67        0.16                g        
+## Skin Stong Slather                                     20    4.65        0.08                g        
+## Chamois Butt'r GoStik Skin Lubricant                   57    4.65        0.21                g        
+## Rocket Pure Friction Therapy Natural Anti-Chafe Balm   65    4.62        0.15                g        
+## ------------------------------------------------------------------------------------------------------</code></pre>
+<p>Now we’ll widen the general use products to include “general” and “off-label” use as well:</p>
+<pre><code>## 
+## =================================================================================================================
+## Product                                                         Reviews Score Product_Unit_Cost Product_Size_Unit
+## -----------------------------------------------------------------------------------------------------------------
+## Surf Butta Anti-Chafe Balm                                        14    4.93        0.24                g        
+## Akileïne Sports NOK Anti-chafing Cream                            10    4.90        0.24               ml        
+## 2Toms SportShield Liquid Roll-On                                  172   4.84        0.29               ml        
+## Uberlube Luxury Lubricant                                         225   4.84        0.28               ml        
+## Avon basics silicone glove hand cream                             23    4.83        0.07               ml        
+## Sportslick                                                        38    4.75        0.13                g        
+## 3M Cavilon Durable Barrier Cream Fragrance Free                   64    4.73        0.08                g        
+## Vaseline                                                          524   4.72        0.01                g        
+## Bag-Balm; Vermonts Original Moisturizing and Softening Ointment   737   4.71        0.07                g        
+## Cramer Skin Lube                                                  10    4.70        0.23                g        
+## -----------------------------------------------------------------------------------------------------------------</code></pre>
+<p>Looking at products for the feet:</p>
+<pre><code>## 
+## =========================================================================================
+## Product                                 Reviews Score Product_Unit_Cost Product_Size_Unit
+## -----------------------------------------------------------------------------------------
+## Trail Toes Foot and Body Cream            156   4.68        0.23                g        
+## HikeGoo Blister Prevention Cream (Feet)   124   4.44        0.12                g        
+## RunGoo Blister Prevention Cream           73    4.34        0.12                g        
+## -----------------------------------------------------------------------------------------</code></pre>
+<p>However, there were a lot of “off-label” uses of products for the feet using baby diaper rash cream, so in fairness, we’ll look at all “feet” use with any number of reviews:</p>
+<pre><code>## 
+## =============================================================================================================
+## Product                                                     Reviews Score Product_Unit_Cost Product_Size_Unit
+## -------------------------------------------------------------------------------------------------------------
+## Hipoglos 4.2 Oz Baby Diaper Rash Cream And Skin Protectant    12    4.76        0.11                g        
+## Trail Toes Foot and Body Cream                                156   4.68        0.23                g        
+## Desitin Maximum Strength Paste                                286   4.58        0.06                g        
+## Boudreaux's Butt Paste Diaper Rash Ointment Skin Protectant   228   4.55        0.08                g        
+## HikeGoo Blister Prevention Cream (Feet)                       124   4.44        0.12                g        
+## RunGoo Blister Prevention Cream                               73    4.34        0.12                g        
+## Band-Aid Friction Blister Block Stick                         128   4.33        0.79                g        
+## -------------------------------------------------------------------------------------------------------------</code></pre>
+<div id="summary-of-product-rankings" class="section level2">
+<h2>Summary of product rankings</h2>
+<p>Overall, between the different uses (on or off-label) there was not much seperation in product ranking, and durability for an ultramarathon is definitely more important than cost. However, some products certainly cost more than others. It seems for general use, Good ol’ petrolatum (petrolium jelly) is dirt cheap and works well. In the next section, we’ll explore the relationship between the water based and oil based products to see if there are any signifigant differences.</p>
 <p><em>Note: This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a></em></p>
+</div>
 </div>
 
 
