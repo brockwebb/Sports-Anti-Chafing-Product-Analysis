@@ -9,14 +9,21 @@ url: https://github.com/brockwebb/Sports-Anti-Chafing-Product-Analysis
 # Synopsis
 There are many different options on the market for anti-chafing in sports. The goal of this analysis was to find the best products at the cheapest price. This required looking at as many products as possible on the market and seek see if the are any patterns in ingredient use that can be correlated to user experience through product ratings. 
 
-There are groups of people that decided to attend advanced potion making and create their own blends of products. Those have not been included, but it might be possible to apply some of the patterns learned to either prove out the home made formulas, improve upon them, or put them into questionable standing. It may be cheaper to make your own, but buying all the ingredients may be incredibly expensive and the resulting amount may be more than one can use in several years. Also, one product is sold in bulk with a very generic sounding name, and may just be the best one to buy, saving the time and trouble of a home-brew. 
-
 Most of the products were obtained from Amazon.com. This has led to interesting consequesnces as side-bar advertisements from Amazon have been offering all kinds of sports lube to more 'personal' products. Even suggestions for interesting underwear have been included as a result of these searches. Interesting in the fast that the underwear includes an extra 'pouch' where the wearer might resemble something more like an elephant (think 'trunk') to add 'extra breeze' for separation and moisture management.
+
+When staring at ingredients and collecting the data, it became difficult to tell the difference between biking products and lotion. Given that cyclists apply this product to both their groin area and the padding or "chamios" (a throwback from when leather may have been used in bike shorts), petrolium products are not friendly to the synthetics in the fabrics used and cause breakdown faster. Also, this was not personally surprising given my experience in using Gold Bond lotion as a quick lube substitute for a run or bike with success. Since staring at labels becames a recent hobby, I've noticed that many of my wife's products contain dimethicone and so does the Gold Bond. 
+
+I've had a history with "off-label" products (meaning they were not 'sold' as 'sports' anti-chafing products). This started with applying some hand salve I had because it felt like it would work just fine and it did. During a vacation I developed a blister with from wearing shoes after I had been training minimilist for a while. I grabed some of my son's diaper cream (it says anti-chafe!) and slathered it on my toes... problem solved! During a runing of the Hellgate 100k, I noticed a very seasoned ultrarunner put Butt Stuff on his feet, commenting to an inquisitive runner that it has worked great for him, especially with "wet foot" -- and Hellgate gets your feet and more soaked in the first 3.5 miles or so. Recently I've been using a prodcut intended for horses, but that is not all that surprising given the off-label use I found frequently mentioned on products meant for cows.  
+
+
+Besides what might be a treasure trove of "off-label" products that might be cheaper substitutes, creative individuals have gone the "roll your own" route with apparent success. These advanced potion makers and sports alchemists have created their own blends of products, plenty of recipes and directions appear on the Internet. Some were even motivated when their favorite foot product (Hydropel) was out of production and necessity is afterall the mother of invention. While interesting, those have not been included, but it might be possible to apply some of the patterns learned to either prove out the home made formulas, improve upon them, or put them into questionable standing. It may be cheaper to make your own, but buying all the ingredients may be incredibly expensive and the resulting amount may be more than one can use in several years. Also, one product is sold in bulk with a very generic sounding name, and may just be a decent one to buy, saving the time and trouble of a home-brew. However, after buying 50 lbs of maltrodecxtrin to make my own running drinks and the resulting reminders from my wife about how long it was taking me to consume it all, a bucket of lube sounds good in theory but would probably take me 20 years to use it all! If anything, the maker culture is something to check out, as reusing gel based deoderiant containers and filling them with lube to create a no-mess applicator are fantistic ideas I have got to try! 
 
 
 # Methodology
 *Please note: all the data files used and complete source code is available from the github repository at: https://github.com/brockwebb/Sports-Anti-Chafing-Product-Analysis*
+All data were gathered from public websites on products and their formulations. Ingredient names are not standardidized, so substitutions were made to represent the same ingredient in a uniform way. All of the original label information was preserved, as well as recording "other" names in the ingredient definitions page. Some research was done into defining the products and what they are or do, but that was not the main focus of the study. Compiling such a list would be great for informational purposes in a later effort. Contributions can be made to the product in this area via the GitHub page, in addition to any other innovations that might make this project better.
 
+Product ratings were based on the 'five star' sytem, popular with most online retailers. The percentage of each (1-5) rating was captured or calculated if a percentage was not given. Breaking the products into use catagories was done due to the fact that formulations may be specific to particular activity or location of the body and used to slice apart the data in different ways. If the manufacturer labeled the product for a specific use or sport, it was noted. 
 
 
 # Environment Setup
@@ -68,25 +75,72 @@ dfMergeProductIngredient$Ingredient_Notes <- NULL
 ```
 
 #Exploritory Analysis
-
-Let's look at the top ten most common ingredients:
-```{r}
-# Display top 5 states, runner count, and percentage of total runners from each
-dfTopTenIngredients <- as.data.frame(table(dfMergeProductIngredient$Common_Ingredient_Name))
-colnames(dfTopTenIngredients) <- c("Ingredient","Product_Count")
-dfTopTenIngredients$Product_Percent <- round(dfTopTenIngredients$Product_Count/nrow(dfProduct) * 100, digits=1)
-dfTopTenIngredients <- dfTopTenIngredients[order(-dfTopTenIngredients$Product_Count),]
-stargazer(head(dfTopTenIngredients,10), type="text", summary=FALSE, rownames=FALSE, digits=0)  # Display top 10
-```
-
-Lets look at the total number of different ingredients used, the products with the most and least number of ingredients, and the overall average number of ingredients used with all products.
-
 ```{r}
 # The total lnumber of ingredients is the number of rows from the 
 # dfIngredientDefs table which has all the ingredients listed
 # We could add more later, so not hard coding the values is best...
 ```
 The total number of ingredients in `r nrow(dfProduct)` products is: `r nrow(dfIngredientDefs)`
+
+This is quite a number of differnent products and most of them are only a few times. This is largely due to either a speciality chemical, fragrances and essential oils, or propellants used in spray-on formulations. Taking a look at a histogram of the distribution will confirm this:
+
+```{r}
+# Seeing the frequency of number of overall ingredient counts in different products
+subIngredients <- as.data.frame(table(dfMergeProductIngredient$Common_Ingredient_Name))
+colnames(subIngredients) <- c("Ingredient","Product_Count")
+hist(subIngredients$Product_Count, main="Ingredient frequency in Anti-Chafing Products Studied", xlab="Number of times an ingredient was used", ylab="Frequency Use", col="Red", breaks=30)
+```
+
+Another way to say this based on the data is to look at the number of times the ingredients were used only once. Creating a table for the times ingredients were used once, and appearing in up to five products:
+```{r}
+dfIngredientFrequecy <- count(subIngredients, c("Product_Count"))
+dfIngredientFrequecy$Percent_Of_List <- dfIngredientFrequecy$freq/nrow(subIngredients) *100
+dfIngredientFrequecy <- dfIngredientFrequecy[order(-dfIngredientFrequecy$Percent_Of_List),]
+stargazer(head(dfIngredientFrequecy,5), type="text", summary=FALSE, rownames=FALSE, digits=0)  # Display top 5
+```
+The result is that 88% of all ingredients are used five times or less in 60 products!
+
+Let's look at the names of top ten most common ingredients:
+```{r}
+# Display top 10 ingredients and the percentage of products they appear in
+dfTopIngredients <- as.data.frame(table(dfMergeProductIngredient$Common_Ingredient_Name))
+colnames(dfTopIngredients) <- c("Ingredient","Product_Count")
+dfTopIngredients$Product_Percent <- round(dfTopIngredients$Product_Count/nrow(dfProduct) * 100, digits=1)
+dfTopIngredients <- dfTopIngredients[order(-dfTopIngredients$Product_Count),]
+stargazer(head(dfTopIngredients,10), type="text", summary=FALSE, rownames=FALSE, digits=0)  # Display top 10
+```
+
+Taking the same idea, we'll look at the products for cyclists separate from the rest:
+```{r}
+# Display top 10 ingredients and the percentage of products they appear in for Cycling
+subBike <-subset(dfMergeProductIngredient, Product_Specific_Use =="Groin")
+subBikeProducts <- subset(dfProduct, Product_Specific_Use =="Groin")
+dfTopIngredientsBike <- as.data.frame(table(subBike$Common_Ingredient_Name))
+colnames(dfTopIngredientsBike) <- c("Ingredient","Product_Count")
+dfTopIngredientsBike$Product_Percent <- round(dfTopIngredientsBike$Product_Count/nrow(subBikeProducts) * 100, digits=1)
+dfTopIngredientsBike <- dfTopIngredientsBike[order(-dfTopIngredientsBike$Product_Count),]
+stargazer(head(dfTopIngredientsBike,10), type="text", summary=FALSE, rownames=FALSE, digits=0)  # Display top 10
+```
+Of the `r nrow(subBikeProducts)` bike products, 12 of them are water based.
+
+Looking at non-cyclist products:
+```{r}
+# Display top 10 ingredients and the percentage of products they appear in for Cycling
+subNonBike <-subset(dfMergeProductIngredient, Product_Specific_Use !="Groin")
+subNonBikeProducts <- subset(dfProduct, Product_Specific_Use !="Groin")
+dfTopIngredientsNonBike <- as.data.frame(table(subNonBike$Common_Ingredient_Name))
+colnames(dfTopIngredientsNonBike) <- c("Ingredient","Product_Count")
+dfTopIngredientsNonBike$Product_Percent <- round(dfTopIngredientsNonBike$Product_Count/nrow(subNonBikeProducts) * 100, digits=1)
+dfTopIngredientsNonBike <- dfTopIngredientsNonBike[order(-dfTopIngredientsNonBike$Product_Count),]
+stargazer(head(dfTopIngredientsNonBike,10), type="text", summary=FALSE, rownames=FALSE, digits=0)  # Display top 10
+```
+Of the `r nrow(subNonBikeProducts)` non-bike products, only 1/3 or so contain water. This is a striking difference and clearly indicates something that needs to be explored further in this analysis.
+
+Lets look at the total number of different ingredients used, the products with the most and least number of ingredients, and the overall average number of ingredients used with all products.
+
+
+
+
 
 ```{r}
 # In the merged dataset, since the products are repeated next to each 
