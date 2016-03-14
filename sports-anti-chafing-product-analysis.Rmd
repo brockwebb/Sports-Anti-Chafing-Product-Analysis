@@ -11,7 +11,11 @@ There are many different options on the market for anti-chafing in sports. The g
 
 Most of the products were obtained from Amazon.com. This has led to interesting consequesnces as side-bar advertisements from Amazon have been offering all kinds of sports lube to more 'personal' products. Even suggestions for interesting underwear have been included as a result of these searches. Interesting in the fast that the underwear includes an extra 'pouch' where the wearer might resemble something more like an elephant (think 'trunk') to add 'extra breeze' for separation and moisture management.
 
-When staring at ingredients and collecting the data, it became difficult to tell the difference between biking products and lotion. Given that cyclists apply this product to both their groin area and the padding or "chamios" (a throwback from when leather may have been used in bike shorts), petrolium products are not friendly to the synthetics in the fabrics used and cause breakdown faster. Also, this was not personally surprising given my experience in using Gold Bond lotion as a quick lube substitute for a run or bike with success. Since staring at labels becames a recent hobby, I've noticed that many of my wife's products contain dimethicone and so does the Gold Bond. 
+When staring at ingredients and collecting the data, it became difficult to tell the difference between biking products and lotion. Given that cyclists apply this product to both their groin area and the padding or "chamios" (a throwback from when leather may have been used in bike shorts), petrolium products are not friendly to the synthetics in the fabrics used and cause breakdown faster. Also, this was not personally surprising given my experience in using Gold Bond lotion as a quick lube substitute for a run or bike with success. Since staring at labels becames a recent hobby, I've noticed that many of my wife's lotion products contain dimethicone and so does the Gold Bond. 
+
+A point on biking products is that they are essentially lotion targeted at a specific market and maybe their particualr formulation has better efficacy for that region of the body. They are more expensive, but that is just supply and demand, cyclists may pay more for products just because they are labeled as being for cycling. Off-label use may be percieved as a risk because it might be safer in the mind of the consumer to use a product "intended" for something, and this goes for runner/triathlete products as well. Perhaps it is marketing psychology and group identification where ownership of a particular project is a projection of self-identy for belonging in a particualr group by using products that are labeled for the sport.  
+
+About 75% of the products studied contain glycerin, which is water attracting and helps prevent water loss. Twelve of the thirteen products contain water as a prime ingredient as well. By putting on the chamios, it is kind of like a lubricant sponge and reservior that releases anti-chafe during the ride with time, sweat, and pressure squeezing it out. From training for triathlon and applying bike products, I always had streaks of color going down my legs toward the end of a long run on an especially hot/humid or rainy day. Hence, I stopped using these products as soon as I ran out of them, prefering the multi-sport triathlon formulations like Brave Solder and Skin Strong Slather to name a few. Everything sweats out on an ultra anyways, and I don't have a chamois reservior to replace what it spent.
 
 I've had a history with "off-label" products (meaning they were not 'sold' as 'sports' anti-chafing products). This started with applying some hand salve I had because it felt like it would work just fine and it did. During a vacation I developed a blister with from wearing shoes after I had been training minimilist for a while. I grabed some of my son's diaper cream (it says anti-chafe!) and slathered it on my toes... problem solved! During a runing of the Hellgate 100k, I noticed a very seasoned ultrarunner put Butt Stuff on his feet, commenting to an inquisitive runner that it has worked great for him, especially with "wet foot" -- and Hellgate gets your feet and more soaked in the first 3.5 miles or so. Recently I've been using a prodcut intended for horses, but that is not all that surprising given the off-label use I found frequently mentioned on products meant for cows.  
 
@@ -82,6 +86,8 @@ dfMergeProductIngredient$Ingredient_Notes <- NULL
 ```
 The total number of ingredients in `r nrow(dfProduct)` products is: `r nrow(dfIngredientDefs)`
 
+A tag cloud might be a nice visual. I read a blog on making these in R and reference is my G+ posts when I shared or commented on the article.
+
 This is quite a number of differnent products and most of them are only a few times. This is largely due to either a speciality chemical, fragrances and essential oils, or propellants used in spray-on formulations. Taking a look at a histogram of the distribution will confirm this:
 
 ```{r}
@@ -125,7 +131,8 @@ Of the `r nrow(subBikeProducts)` bike products, 12 of them are water based.
 
 Looking at non-cyclist products:
 ```{r}
-# Display top 10 ingredients and the percentage of products they appear in for Cycling
+# Display top 10 ingredients and the percentage of products they appear in for Running and 
+# General anti-chafe use
 subNonBike <-subset(dfMergeProductIngredient, Product_Specific_Use !="Groin")
 subNonBikeProducts <- subset(dfProduct, Product_Specific_Use !="Groin")
 dfTopIngredientsNonBike <- as.data.frame(table(subNonBike$Common_Ingredient_Name))
@@ -136,12 +143,25 @@ stargazer(head(dfTopIngredientsNonBike,10), type="text", summary=FALSE, rownames
 ```
 Of the `r nrow(subNonBikeProducts)` non-bike products, only 1/3 or so contain water. This is a striking difference and clearly indicates something that needs to be explored further in this analysis.
 
-Lets look at the total number of different ingredients used, the products with the most and least number of ingredients, and the overall average number of ingredients used with all products.
+Out of curiosity for products that are specifically for use (even off-label use) for the feet are probably even more different. Moisture on the feet and the danger of them becoming macerated (the technical term for a whole lot of foot skin damage) would scream for oil-based water repeling care. Hence, I can only imagine the now defunct popular hiker foot care "Hydropel" may have gotten its name from that. For some truely gnarly pictures and descriptions of bad foot maceration in an ultra with some really cool scientific detail on what is happening (well I found it interesting) check out this great article:    
+http://www.blisterprevention.com.au/blister-blog/skin-maceration-of-the-feet
 
+Although there are only seven products for specific use on feet, we can go through the same exercise to see the most popular ingredients for those products. When it comes to the off-label use of diaper ointments, I have found they work quite well in the groin area (which is the are they are sold to protect) for running as well (but one must be OK with the cod liver oil smell and white zinc oxide coating). Here are the most popular ingredients for the feet:
 
+```{r}
+# Display top 10 ingredients and the percentage of products they appear in for use on
+# the feet
+subNonBikeFeet <-subset(dfMergeProductIngredient, Product_Specific_Use =="Feet")
+subNonBikeProductsFeet <- subset(dfProduct, Product_Specific_Use =="Feet")
+dfTopIngredientsNonBikeFeet <- as.data.frame(table(subNonBikeFeet$Common_Ingredient_Name))
+colnames(dfTopIngredientsNonBikeFeet) <- c("Ingredient","Product_Count")
+dfTopIngredientsNonBikeFeet$Product_Percent <- round(dfTopIngredientsNonBikeFeet$Product_Count/nrow(subNonBikeProductsFeet) * 100, digits=1)
+dfTopIngredientsNonBikeFeet <- dfTopIngredientsNonBikeFeet[order(-dfTopIngredientsNonBikeFeet$Product_Count),]
+stargazer(head(dfTopIngredientsNonBikeFeet,10), type="text", summary=FALSE, rownames=FALSE, digits=0)  # Display top 10
+```
+So, four of seven contain water, but they could simply be an emulsion of oil and water based on achieving a particular viscosity (how easy is it to spread), in connection with certian other ingredients (like glycerins or glycols) or some other characteristic where it is important. 
 
-
-
+Breaking things down as a whole, lets look at the total number of different ingredients used, the products with the most and least number of ingredients, and the overall average number of ingredients used with all products.
 ```{r}
 # In the merged dataset, since the products are repeated next to each 
 # ingredient in it, we can grab the array of the product names 
@@ -181,7 +201,7 @@ stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, di
 That changes things a bit, and gives us greater confidence based on a larger number of user experiences. Because one focus of this analysis is looking at running products, we'll remove the biking and "off-label" ones, and focus on products that have reviews for "sport" use:
 
 ```{r}
-dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audiance =="Sport" & Product_Audiance_Cat2 !="Bike", select=c(Product,Reviews,Score))
+dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Audience_Cat2 !="Bike", select=c(Product,Reviews,Score))
 dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
 stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
 ```
@@ -190,7 +210,7 @@ Finially, let's look at products for "general" use and then products specificall
 
 ```{r}
 # Bike products were all specifically used for the "groin" area only, so we can use that to subset the data
-dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audiance =="Sport" & Product_Specific_Use !="Groin" & Product_Specific_Use !="Feet" , select=c(Product,Reviews,Score,Product_Unit_Cost,Product_Size_Unit))
+dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use !="Groin" & Product_Specific_Use !="Feet" , select=c(Product,Reviews,Score,Product_Unit_Cost,Product_Size_Unit))
 dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
 stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
 ```
@@ -208,7 +228,7 @@ stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, di
 Looking at products for the feet:
 ```{r}
 # Bike products were all specifically used for the "groin" area only, so we can use that to subset the data
-dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audiance =="Sport" & Product_Specific_Use !="Groin" & Product_Specific_Use !="General" , select=c(Product,Reviews,Score,Product_Unit_Cost,Product_Size_Unit))
+dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use !="Groin" & Product_Specific_Use !="General" , select=c(Product,Reviews,Score,Product_Unit_Cost,Product_Size_Unit))
 dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
 stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
 ```
@@ -223,6 +243,50 @@ stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, di
 
 ## Summary of product rankings
 Overall, between the different uses (on or off-label) there was not much seperation in product ranking, and durability for an ultramarathon is definitely more important than cost. However, some products certainly cost more than others. It seems for general use, Good ol' petrolatum (petrolium jelly) is dirt cheap and works well. In the next section, we'll explore the relationship between the water based and oil based products to see if there are any signifigant differences.
+
+# Ingredient effect of product rating (Regression Analysis)
+Here we will look at the presence of products and possible interaction of ingredients to the product rating. Because "off-label" use may pollute the results (most of the reviews are not from sports use), they are not included. However, fortythree of the sixy procucts have ten or more reviews, so the sample size is good for doing this. 
+
+
+```{r}
+# Getting a subset of the merged product list with 10 or more reviews and a list with
+# no off-label use
+subProductsIngredientsTenPlusReviewsNoOffLabel <- subset(dfMergeProductIngredient, Reviews >=10 & Product_Audience !="Off-Label")
+subProductListTenPlusReviewsNoOffLabel <- subset(dfProduct, Reviews >=10 & Product_Audience !="Off-Label")
+```
+
+Making a chord diagram to visualize relationships
+```{r}
+# Uses Libraries
+#library(circlize) (need to put these in the init section later)
+#library(reshape)
+
+# First we must view each product has having a destination to each ingredient
+# If a product has an ingredient, it's amount is "1" and if it
+# does not have an ingredient, then it's relationship is "0"
+
+# Get a subset of products with their ingredients only
+tsub1 <- subset(subProductsIngredientsTenPlusReviewsNoOffLabel, select=c(Product, Common_Ingredient_Name))
+
+# This makes a table of all prodcuts in rows, all ingredients in the columns
+# where a "1" means 'true' or it has that ingredient, a '0' for false or 
+# it does not contain it...
+tsub2 <- cast(tsub1, Product ~ Common_Ingredient_Name)
+
+# Convert the table to matrix and delete the first column
+tsub3 <- data.matrix(subset(tsub2, select = -c(1)))
+
+# set Matrix Row and Column names
+rownames(tsub3) <- tsub2$Product
+colnames(tsub3) <- colnames(tsub3)
+
+chordDiagram(tsub3)
+
+```
+# Ingredient cluster analysis
+Here we will look to see if there are clusters of products that are typical and see the effect on the product rating.
+
+A chord diagram might be a good visual.
 
 *Note: This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>*
      
