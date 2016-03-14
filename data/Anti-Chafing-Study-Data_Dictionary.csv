@@ -15,8 +15,8 @@ Column,Definition
 Product_ID,Index value for the anti-chafe product
 Product,Name of the product that it is being sold under
 Product_Type,Distinguishing between different formulations; viscosity; etc. Creams are thinner like lotions; Ointments are thicker and most likely oil based; solids are very thick that are most likely applied from an applicator; liquids are sprayed or rolled on or rubbed in
-Product_Audiance,"Some products are sold as ""sport"" products marketed specifically for sports use. General products are sold as anti-chafe but not for ""sports"" specifically. Off-Label products were identified in blogs; user forums; or from personal experience as good products ot use for sports; but not marketed as anti-chafe products for sports "
-Product_Audiance_Cat2,"If a product was marketed to ""hikers"" or ""triathlon"" of ""bike"" audiences this was captured. Bike products are meant for use in the ""saddle"" area applied to the groin and biking shorts padding or chamios."
+Product_Audience,"Some products are sold as ""sport"" products marketed specifically for sports use. General products are sold as anti-chafe but not for ""sports"" specifically. Off-Label products were identified in blogs; user forums; or from personal experience as good products ot use for sports; but not marketed as anti-chafe products for sports "
+Product_Audience_Cat2,"If a product was marketed to ""hikers"" or ""triathlon"" of ""bike"" audiences this was captured. Bike products are meant for use in the ""saddle"" area applied to the groin and biking shorts padding or chamios."
 Product_Specific_Use,Defines what area of the body this product is typically applied
 Product_List_Price_USD,"Cost of the product (list price -- meaning that ""discounts"" or ""specials"" were ignored) in US dollars; 2016"
 Product_Size,"Amount of the product in grams or mililiters. The density of water is 1g/ml. This may or may not be useful because of the nature of the product and how much is actually required in a typical application. One might put more ""lotion"" products on; but rub on a very small amount of a solid product."

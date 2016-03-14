@@ -1,4 +1,4 @@
-Product_ID,Product,Product_Type,Product_Audiance,Product_Audiance_Cat2,Product_Specific_Use,Product_List_Price_USD,Product_Size,Product_Size_Unit,Product_Unit_Cost,Reviews,Score,Rate_5,Rate_4,Rate_3,Rate_2,Rate_1,Product_Rating_Date,Rating_Source,Ingredient_Date,Ingredient_Source
+Product_ID,Product,Product_Type,Product_Audience,Product_Audience_Cat2,Product_Specific_Use,Product_List_Price_USD,Product_Size,Product_Size_Unit,Product_Unit_Cost_USD,Reviews,Score,Rate_5,Rate_4,Rate_3,Rate_2,Rate_1,Product_Rating_Date,Rating_Source,Ingredient_Date,Ingredient_Source
 1,Body Glide Origional,Solid,Sport,All,General,9.99,36.9,g,0.271,1685,4.53,76,12,5,3,4,2/14/2016,Amazon.com,2/14/2016,Label
 2,Gold Bond Friction Defense,Solid,Sport,All,General,5.99,49.6,g,0.121,341,4.48,73,13,6,5,3,2/14/2016,Amazon.com,2/14/2016,http://www.amazon.com/Gold-Bond-Friction-Defense-Ounce/dp/B007VC9DKI
 3,Skin Stong Slather,Cream,Sport,Run,General,12.99,173,g,0.075,20,4.65,75,15,10,0,0,10/14/2014,Amazon.com,2/14/2016,Label
