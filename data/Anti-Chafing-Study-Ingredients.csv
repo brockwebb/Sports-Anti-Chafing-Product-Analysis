@@ -1,5 +1,5 @@
 Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name_Listed,Ingredient_Notes
-1,42,Caprylic/Capric Triglycerine,1,Caprylic/Capric Triglycerine,na
+1,42,Caprylic/Capric Triglyceride,1,Caprylic/Capric Triglycerine,na
 1,51,Cetearyl Alcohol,2,Cetearyl Alcohol,na
 1,167,Ozokerite Wax,3,Ozokerite Wax,na
 1,113,Glyceryl Dibehenate,4,Glyceryl Dibehenate,na
@@ -7,7 +7,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 1,112,Glyceryl Behenate,6,Glyceryl Behenate,na
 1,230,Stearyl Alcohol,7,Stearyl Alcohol,na
 1,7,Allantoin,8,Allantoin,na
-1,257,Vitamin E,9,Tocopherol (Vitamin E),na
+1,257,Vitamin E ,9,Tocopherol (Vitamin E),na
 2,42,Caprylic/Capric Triglyceride,1,Caprylic/Capric Triglyceride,na
 2,244,Tribehenin,2,Tribehenin,na
 2,230,Stearyl Alcohol,3,Stearyl Alcohol,na
@@ -21,13 +21,13 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 2,134,Isopropyl Myristate,11,Isopropyl Myristate,na
 2,29,Bisabolol,12,Bisabolol,na
 2,109,Ginger Root Extract,13,Zingiber Officinale (Ginger Root) Extract,na
-2,257,Vitamin E,14,Tocopheryl Acetate,na
+2,257,Vitamin E ,14,Tocopheryl Acetate,na
 3,259,Water,1,Water,na
 3,162,Mineral Oil,2,Mineral Oil,na
 3,228,Stearic Acid,3,Stearic Acid,na
 3,135,Isopropyl Palmitate,4,Isopropyl Palmitate,na
 3,51,Cetearyl Alcohol,5,Cetearyl Alcohol,na
-3,190,Polysorbate-60,6,Polysorbate-60,na
+3,190,Polysorbate 60,6,Polysorbate-60,na
 3,54,Cetyl Alcohol,7,Cetyl Alcohol,na
 3,111,Glycerin,8,Glycerin,na
 3,114,Glyceryl Stearate,9,Glyceryl Stearate,na
@@ -39,7 +39,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 3,8,Aloe Vera,15,Aloe Leaf Juice,na
 3,7,Allantoin,16,Allantoin,na
 3,208,Shea Butter,17,Shea Butter,na
-3,257,Vitamin E,18,Vitamin E,na
+3,257,Vitamin E ,18,Vitamin E,na
 3,149,Macadamia Seed Oil,19,Macadamia Seed Oil,na
 3,260,Wheat Germ Oil,20,Wheat Germ Oil,na
 3,118,Grape Seed Oil,21,Grape Seed Oil,na
@@ -105,7 +105,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 8,202,Rosemary Oil,9,Rosemary Oil,na
 8,176,Peppermint Oil,10,Peppermint Oil,na
 8,70,Comfrey Extract,11,Comfrey Root Extract,na
-8,257,Vitamin E,12,Tocopherol,na
+8,257,Vitamin E ,12,Tocopherol,na
 9,178,Petrolatum,1,Petrolatum,na
 10,162,Mineral Oil,1,Mineral Oil,na
 10,259,Water,1,Water,na
@@ -120,7 +120,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 10,171,PEG-100 Stearate,10,PEG-100 Stearate,na
 10,193,Potassium Sorbate,11,Potassium Sorbate,na
 10,94,EDTA,12,Disodium EDTA,na
-10,257,Vitamin E,13,Tocopheryl Acetate,na
+10,257,Vitamin E ,13,Tocopheryl Acetate,na
 10,8,Aloe Vera,14,Aloe Leaf Juice,na
 10,71,Corn Oil,15,Corn Oil,na
 10,200,Retinyl Palmitate,16,Retinyl Palmitate,na
@@ -153,10 +153,10 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 13,39,Calendula Extract,11,Calendula Flower Extract,na
 13,15,Avocado Oil,12,Avocado Oil,na
 13,98,Essential Oils,13,Essential Oils,na
-13,257,Vitamin E,14,Tocopherol/Vitamin E,na
+13,257,Vitamin E ,14,Tocopherol/Vitamin E,na
 14,83,Dimethicone,1,Dimethicone,na
 14,8,Aloe Vera,2,Aloe Vera Extract,na
-14,257,Vitamin E,3,Vitamin E,na
+14,257,Vitamin E ,3,Vitamin E,na
 15,125,Hydrogenated Polyisobutene,1,Hydrogenated Polyisobutene,na
 15,223,Soybean Oil,2,Soybean Oil,na
 15,101,Ethylene/Propulene/Styrene Copolymer,3,Ethylene/Propulene/Styrene Copolymer,na
@@ -169,7 +169,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 15,267,Zinc Oxide,10,CL 77497,Zinc Oxide Mineral Powder number is CL 77497
 15,18,Beeswax,11,Cera Alba (Beeswax),na
 15,83,Dimethicone,12,PEG 10 Dimethicone,na
-15,257,Vitamin E,13,Tocopheryl Acetate,na
+15,257,Vitamin E ,13,Tocopheryl Acetate,na
 15,252,Vitamin A,14,Retinyl Palmitate,na
 15,256,Vitamin D3,15,Cholecalciferol,na
 15,255,Vitamin C,16,Ascorbic Acid,na
@@ -205,7 +205,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 17,166,Olive Oil,5,Olive Fruit Oil,na
 17,206,Sesame Seed Oil,6,Sesame Seed Oil,na
 17,260,Wheat Germ Oil,7,Wheat Germ Oil,na
-17,257,Vitamin E,8,Vitamin E,na
+17,257,Vitamin E ,8,Vitamin E,na
 17,136,Jojoba Oil,9,Jojoba Seed Oil,na
 17,105,Evening Primrose Oil,10,Evening Primrose Oil,na
 17,199,Propylparaben,11,Propylparaben,Preservative
@@ -234,10 +234,10 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 19,51,Cetearyl Alcohol,8,Cetearyl Alcohol,na
 19,7,Allantoin,9,Allantoin,na
 19,168,Panthenol,10,Panthenol,Provitiman B5
-19,257,Vitamin E,11,Tocopheryl Acetate,na
+19,257,Vitamin E ,11,Tocopheryl Acetate,na
 19,237,Sweet Almond Oil,12,Sweet Almond Oil,na
 19,222,Soy Sterols,13,Soy Sterols,na
-19,257,Vitamin E,14,Mixed Tocopherols,na
+19,257,Vitamin E ,14,Mixed Tocopherols,na
 19,144,Lecithin,15,Lecithin,na
 19,119,Green Tea Extract,16,Green Tea Extract,na
 19,29,Bisabolol,17,Chamomile Extract,na
@@ -258,14 +258,14 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 20,161,Methylparaben,13,Methylparaben,na
 20,162,Mineral Oil,14,Mineral Oil,na
 20,178,Petrolatum,15,Petrolatum,na
-20,199,Propyparaben,16,Propyparaben,Preservative
+20,199,Propylparaben,16,Propyl Paraben,Preservative
 20,239,Synthetic Beeswax,17,Synthetic Beeswax,na
-20,257,Vitamin E,18,Tocopheryl Acetate,na
+20,257,Vitamin E ,18,Tocopheryl Acetate,na
 20,244,Tribehenin,19,Tribehenin,na
 21,178,Petrolatum,1,White Petrolatum,na
 21,57,Cetyl Esters Wax NF,2,Synthetic Spermaceti Wax (coconut derived),na
 21,21,Bentone Gel,3,Bentone Gel,na
-21,139,Lanolin ,4,Lanolin,na
+21,139,Lanolin,4,Lanolin,na
 22,139,Lanolin,1,Lanolin,"Actual Product Order not known; Best Guess; listed first as ""active ingretient"""
 22,18,Beeswax,2,Yellow Bees Wax,na
 22,94,EDTA,3,Disodium EDTA,na
@@ -292,7 +292,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 24,83,Dimethicone,6,Stearyl Dimethicone,na
 24,181,Phenoxyethanol,7,Phenoxyethanol,na
 24,8,Aloe Vera,8,Aloe Extract,na
-24,257,Vitamin E,9,Vitamin E,na
+24,257,Vitamin E ,9,Vitamin E,na
 24,223,Soybean Oil,10,Maleated Soybean Oil,na
 24,14,Ascorbyl Palmitate,11,Ascorbyl Palmitate,Anti-oxident; Vitamin C deritivitive
 24,107,Fragrance,12,Fragrance,na
@@ -308,7 +308,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 26,241,Tapioca Starch,3,Tapioca Starch,na
 26,198,Propylene Glycol,4,Propylene Glycol,na
 26,54,Cetyl Alcohol,5,Cetyl Alcohol,na
-26,190,Polysorbate-60,6,Polysorbate-60,na
+26,190,Polysorbate 60,6,Polysorbate-60,na
 26,51,Cetearyl Alcohol,7,Cetearyl Alcohol,na
 26,247,Triethanolamine,8,Triethanolamine,aka TEA
 26,44,Carbomer,9,Carbomer,na
@@ -331,9 +331,9 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 27,262,Willow Extract,6,Epilobium Angustifolium Flower/Leaf/Stem Extract,na
 27,83,Dimethicone,7,Dimethicone,na
 27,168,Panthenol,8,Panthenol,Provitiman B5
-27,257,Vitamin E,8,Tocopheryl Acetate,na
+27,257,Vitamin E ,8,Tocopheryl Acetate,na
 27,255,Vitamin C,9,tetrahexyldecyl ascorbate,na
-27,178,Phellodendrom Amurense Bark Extract,11,Phellodendrom Amurense Bark Extract,na
+27,179,Phellodendron Amurense Bark Extract,11,Phellodendrom Amurense Bark Extract,na
 27,205,Sandalwood Extract,12,santalum album (sandalwood) extract,na
 27,104,Eucalyptus Oil,13,Eucalyptus Globulus Leaf Oil,na
 27,143,Lavender Oil,14,lavandula angustifolia (lavender) oil,na
@@ -367,7 +367,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 29,167,Ozokerite Wax,3,Ozokerite,na
 29,51,Cetearyl Alcohol,4,Cetearyl Alcohol,na
 29,116,Glycol Stearate,5,Glycol Stearate,na
-29,257,Vitamin E,6,DL Alpha Tocopherol,na
+29,257,Vitamin E ,6,DL Alpha Tocopherol,na
 29,8,Aloe Vera,7,Aloe Vera,na
 30,244,Tribehenin,1,Tribehenin,na
 30,114,Glyceryl Stearate,2,Glycerol Monostearate,na
@@ -381,7 +381,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 30,102,Ethylhexylglycerin,10,Ethylhexylglycerin,na
 31,259,Water,11,Water,na
 31,51,Cetearyl Alcohol,12,Cetearyl Alcohol,na
-31,50,Ceteareth 20,13,Ceteareth 20,na
+31,49,Ceteareth 20,13,Ceteareth 20,na
 31,83,Dimethicone,14,Dimethicone 4%,na
 31,241,Tapioca Starch,15,Tapioca Starch,na
 31,111,Glycerin,16,Glycerin,na
@@ -402,7 +402,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 32,181,Phenoxyethanol,7,Phenoxyethanol,na
 32,43,Caprylyl Glycol,8,Caprylyl Glycol,na
 32,217,Sorbic Acid,9,Sorbic Acid,na
-32,257,Vitamin E,10,Natural Tocopherol (Vitamin E),na
+32,257,Vitamin E ,10,Natural Tocopherol (Vitamin E),na
 32,242,Tea Tree Oil,11,Melaeuca Alternifolia (Tea Tree) Leaf Oil,na
 32,238,Sweet Orange Peel Oil,12,citrus aurantium dulcis (sweet orange peel) essential oil,na
 32,114,Glyceryl Stearate,13,Glycerin Stearate,na
@@ -420,11 +420,11 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 33,72,Corn Starch,10,Zea Mays (Corn) Starch,na
 33,83,Dimethicone,11,Dimethicone,na
 33,171,PEG-100 Stearate,12,PEG-100 Stearate,na
-33,50,Ceteareth 20,13,Ceteareth 20,na
+33,49,Ceteareth 20,13,Ceteareth 20,na
 33,111,Glycerin,14,Glycerine,na
 33,54,Cetyl Alcohol,15,Cetyl Alcohol,na
 33,119,Green Tea Extract,16,Camellia Sinensis (Green Tea) Extract,na
-33,257,Vitamin E,17,Tocopheryl Acetate,na
+33,257,Vitamin E ,17,Tocopheryl Acetate,na
 33,8,Aloe Vera,18,Aloe Barbadensis Extract,na
 33,255,Vitamin C,19,Ascorbic Acid,na
 33,202,Rosemary Oil,20,Rosmarinus Officinalis (Rosemary) Leaf Extract,na
@@ -441,7 +441,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 34,167,Ozokerite Wax,3,Ozokerite,na
 34,51,Cetearyl Alcohol,4,Cetearyl Alcohol,na
 34,205,Sandalwood Extract,5,Santalum Album (Sandalwood) Wood Extract,na
-34,178,Phellodendrom Amurense Bark Extract,6,Phellodendrom Amurense Bark Extract,na
+34,179,Phellodendron Amurense Bark Extract,6,Phellodendrom Amurense Bark Extract,na
 34,16,Barley Extract,7,Hordeum Distichon (Barley) Extract,na
 34,186,Polyglyceryl-10 Pentastearate,8,Polyglyceryl-10 Pentastearate,na
 34,20,Behenyl Alcohol,9,Behenyl Alcohol,na
@@ -458,7 +458,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 34,88,Dipotassium Glycyrrhizate,20,Dipotassium Glycyrrhizate,na
 34,29,Bisabolol,21,Bisabolol,na
 34,7,Allantoin,22,Allantoin,na
-34,257,Vitamin E,23,Tocopherol (Vitamine E),na
+34,257,Vitamin E ,23,Tocopherol (Vitamine E),na
 34,154,Menthol,24,Menthol,na
 34,242,Tea Tree Oil,25,Melaleuca Alternifolia (Tea Tree) Leaf Oil,na
 34,264,Xanthan Gum,26,Xanthan Gum,Natural Thickener
@@ -479,7 +479,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 35,83,Dimethicone,6,Dimethicone,na
 35,52,Cetearyl Glucoside,7,Cetearyl Glucoside,na
 35,168,Panthenol,8,Panthenol,Provitiman B5
-35,257,Vitamin E,9,Tocopheryl Acetate,na
+35,257,Vitamin E ,9,Tocopheryl Acetate,na
 35,255,Vitamin C,10,Tetrahexyldecyl Ascorbate,na
 35,179,Phellodendron Amurense Bark Extract,11,Phellodendrom Amurense Bark Extract,na
 35,205,Sandalwood Extract,12,Sandalwood Extract,na
@@ -493,12 +493,12 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 35,107,Fragrance,20,Fragrance,na
 36,83,Dimethicone,1,Dimethicone,na
 36,8,Aloe Vera,2,Aloe Vera Extract,na
-36,257,Vitamin E,3,Tocopheryl (Vitamin E),na
+36,257,Vitamin E ,3,Tocopheryl (Vitamin E),na
 37,76,Cyclopentasiloxane,1,Cyclopentasiloxane,na
 37,85,Dimethicone/Vinyl Dimethicone Crosspolymer,2,Dimethicone/Vinyl Dimethicone Crosspolymer,na
 37,83,Dimethicone,3,Dimethicone 1.2%,Guessing at ingredient order (listed seperately as active ingredient)
 37,209,Silica,4,Silica,na
-37,257,Vitamin E,5,Tocopheryl Acetate,na
+37,257,Vitamin E ,5,Tocopheryl Acetate,na
 37,250,Trisiloxane,6,Trisiloxane,na
 38,259,Water,1,Water,na
 38,124,Hydrogenated Polydecene,2,Hydrogenated Polydecene,na
@@ -516,7 +516,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 38,86,Dimethicone/Vinyltrimethylsiloxysilicate Crosspolymer,14,Dimethicone/Vinyltrimethylsiloxysilicate Crosspolymer,na
 38,154,Menthol,15,Menthol,na
 38,120,Hamamelis Virginiana Extract,16,Hamamelis Virginiana Extract,na
-38,257,Vitamin E,17,Tocopheryl Acetate,na
+38,257,Vitamin E ,17,Tocopheryl Acetate,na
 38,180,Phenethyl Alcohol,18,Phenethyl Alcohol,na
 38,115,Glycine Soja Oil,19,Glycine Soja Oil,na
 38,195,PPG-2-Methyl Ether,20,PPG-2-Methyl Ether,na
@@ -525,7 +525,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 38,160,Methylisothiazolinone,23,Methylisothiazolinone,na
 38,77,Daucus Carota Sativa Root Extract,24,Daucus Carota Sativa Root Extract,na
 38,27,Beta-Carotene,25,Beta-Carotene,na
-38,257,Vitamin E,26,Tocopherol,na
+38,257,Vitamin E ,26,Tocopherol,na
 38,35,C.I. 47005,27,C.I. 47005,na
 39,259,Water,1,Deionized water (aqua),na
 39,228,Stearic Acid,2,Stearic Acid,na
@@ -575,7 +575,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 43,228,Stearic Acid,8,Stearic Acid,na
 43,18,Beeswax,9,Beeswax,na
 43,267,Zinc Oxide,10,Zinc Oxide,na
-43,257,Vitamin E,11,Vitamin E Oil,na
+43,257,Vitamin E ,11,Vitamin E Oil,na
 43,17,Basil Oil,12,Basil Oil,na
 43,65,Clove Oil,13,Clove Oil,na
 43,143,Lavender Oil,14,Lavender Oil,na
@@ -586,7 +586,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 44,42,Caprylic/Capric Triglyceride,3,Caprylic/Capric Triglyceride,na
 44,45,Carnauba Wax,4,Organic Carnauba Wax,na
 44,7,Allantoin,5,Allantoin,Guessing at ingredient order (listed seperately as active ingredient)
-44,257,Vitamin E,6,Vitamin E (Tocopheryl Acetate),na
+44,257,Vitamin E ,6,Vitamin E (Tocopheryl Acetate),na
 44,244,Tribehenin,7,Tribehenin,na
 45,259,Water,1,Water,na
 45,241,Tapioca Starch,2,Tapioca Starch,na
@@ -615,7 +615,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 46,213,Sodium Cetearyl Sulfate,12,Sodium Cetearyl Sulfate,na
 46,214,Sodium Lauryl Sulfate,13,Sodium Lauryl Sulfate,na
 46,115,Glycine Soja Oil,14,Glycine Soja Oil,na
-46,257,Vitamin E,15,Tocopherol,na
+46,257,Vitamin E ,15,Tocopherol,na
 46,161,Methylparaben,16,Methylparaben,na
 46,103,Ethylparaben,17,Ethylparaben,na
 46,199,Propylparaben,18,Propylparaben,Preservative
@@ -633,7 +633,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 46,64,Citronellol,31,Citronellol,na
 47,61,Cinnamic Acid,1,Cinnamic Acid,na
 47,234,Steroid Fraction Stigmasterol,2,Steroid Fraction Stigmasterol,na
-47,257,Vitamin E,3,tocopherols and tocotrienols (triglycerides),na
+47,257,Vitamin E ,3,tocopherols and tocotrienols (triglycerides),na
 47,208,Shea Butter,4,Shea Butter,na
 48,162,Mineral Oil,1,Mineral Oil,na
 48,224,Stearamide MEA,2,Stearamide MEA,na
@@ -645,7 +645,7 @@ Product_ID,Ingredient_ID,Common_Ingredient_Name,Ingredient_Order,Ingredient_Name
 49,83,Dimethicone,1,Dimethicone,na
 49,87,Dimethiconol,2,Dimethiconol,na
 49,75,Cyclomethicone,3,Cyclomethicone,na
-49,257,Vitamin E,4,Tocopheryl Acetate (Vitamin E),na
+49,257,Vitamin E ,4,Tocopheryl Acetate (Vitamin E),na
 50,178,Petrolatum,1,Petrolatum,na
 50,75,Cyclomethicone,2,Cyclomethicone,na
 50,18,Beeswax,3,Bee's Wax,na

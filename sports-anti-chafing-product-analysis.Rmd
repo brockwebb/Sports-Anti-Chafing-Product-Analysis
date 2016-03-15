@@ -280,7 +280,7 @@ tsub3 <- data.matrix(subset(tsub2, select = -c(1)))
 rownames(tsub3) <- tsub2$Product
 colnames(tsub3) <- colnames(tsub3)
 
-chordDiagram(tsub3)
+#chordDiagram(tsub3)
 
 ```
 # Ingredient cluster analysis
