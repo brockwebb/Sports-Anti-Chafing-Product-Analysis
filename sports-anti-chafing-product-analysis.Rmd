@@ -185,6 +185,7 @@ stargazer(tail(dfProductCounts,5),type="text", summary=FALSE, rownames=FALSE)  #
 Now let's look at the top rated products, and include the number of reviews:
 
 ```{r}
+# getting top rated products of all types
 dfProductRank <-subset(dfProduct, select=c(Product,Reviews,Score))
 dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
 stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
@@ -193,6 +194,7 @@ stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, di
 Some of the top rated products do not have many reviews, meaning that there could be a lot of bias becuase there is not enough information. So, we will only take the top products with more than 10 reviews.
 
 ```{r}
+# display only products with ten or more reviews
 dfProductRank <-subset(dfProduct, Reviews >=10, select=c(Product,Reviews,Score))
 dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
 stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
@@ -201,25 +203,46 @@ stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, di
 That changes things a bit, and gives us greater confidence based on a larger number of user experiences. Because one focus of this analysis is looking at running products, we'll remove the biking and "off-label" ones, and focus on products that have reviews for "sport" use:
 
 ```{r}
+# just on label sport, including feet, no bike
 dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Audience_Cat2 !="Bike", select=c(Product,Reviews,Score))
 dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
 stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
 ```
 
+Just to see how many bike products are available in the sample with more than 10 reviews:
+```{r}
+# just on label sport, bike only
+dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Audience_Cat2 =="Bike", select=c(Product,Reviews,Score))
+dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
+stargazer(head(dfProductRank,15), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
+```
+
+Interestingly enough, there are eleven total reviews, making the 'top ten' the complete list.
+
 Finially, let's look at products for "general" use and then products specifically advertised for use on the feet. We'll add the product unit cost, but be advised that a little BodyGlide goes a long way, so how much is used per application is different depending on the product. Starting with "general use" products that are advertized for "sports" use first:
 
 ```{r}
-# Bike products were all specifically used for the "groin" area only, so we can use that to subset the data
-dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use !="Groin" & Product_Specific_Use !="Feet" , select=c(Product,Reviews,Score,Product_Unit_Cost,Product_Size_Unit))
+# Bike products were all specifically used for the "groin" area only, so we can use that to subset the data, we'll also get rid of 'feet' to leave running only
+dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use !="Groin" & Product_Specific_Use !="Feet" , select=c(Product,Reviews,Score,Product_Unit_Cost_USD,Product_Size_Unit))
 dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
 stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
 ```
 
+Might as well compare cost of the bike products:
+```{r}
+# Bike products were all specifically used for the "groin" area only, so we can use that to subset the data, we'll also get rid of 'feet' to leave running only
+dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use =="Groin" & Product_Specific_Use !="Feet" , select=c(Product,Reviews,Score,Product_Unit_Cost_USD,Product_Size_Unit))
+dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
+stargazer(head(dfProductRank,11), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
+```
+
+Interesting enough, the top rated bike product is in the middle of the pack for cost and the cheapest is at the bottom of the ratings list.
+
 Now we'll widen the general use products to include "general" and "off-label" use as well:
 
 ```{r}
-# Bike products were all specifically used for the "groin" area only, so we can use that to subset the data
-dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Specific_Use !="Groin" & Product_Specific_Use !="Feet" , select=c(Product,Reviews,Score,Product_Unit_Cost,Product_Size_Unit))
+# Bike products were all specifically used for the "groin" area only, so we can use that to subset the data, if we also get rid of 'feet' we are left with running products only
+dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Specific_Use !="Groin" & Product_Specific_Use !="Feet" , select=c(Product,Reviews,Score,Product_Unit_Cost_USD,Product_Size_Unit))
 dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
 stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
 ```
@@ -227,16 +250,16 @@ stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, di
 
 Looking at products for the feet:
 ```{r}
-# Bike products were all specifically used for the "groin" area only, so we can use that to subset the data
-dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use !="Groin" & Product_Specific_Use !="General" , select=c(Product,Reviews,Score,Product_Unit_Cost,Product_Size_Unit))
+# Bike products were all specifically used for the "groin" area only, so we can use that to subset the data, as well as "sport" to remove off-label, also remove 'general' to keep only feet
+dfProductRank <-subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use !="Groin" & Product_Specific_Use !="General" , select=c(Product,Reviews,Score,Product_Unit_Cost_USD,Product_Size_Unit))
 dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
 stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
 ```
 
 However, there were a lot of "off-label" uses of products for the feet using baby diaper rash cream, so in fairness, we'll look at all "feet" use with any number of reviews:
 ```{r}
-# Bike products were all specifically used for the "groin" area only, so we can use that to subset the data
-dfProductRank <-subset(dfProduct, Product_Specific_Use !="Groin" & Product_Specific_Use !="General" , select=c(Product,Reviews,Score,Product_Unit_Cost,Product_Size_Unit))
+# Bike products were all specifically used for the "groin" area only, so we can use that to subset the data along with the 'general' application area...leaving only 'feet'
+dfProductRank <-subset(dfProduct, Product_Specific_Use !="Groin" & Product_Specific_Use !="General" , select=c(Product,Reviews,Score,Product_Unit_Cost_USD,Product_Size_Unit))
 dfProductRank <- dfProductRank[order(-dfProductRank$Score),]
 stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, digits=2)  # Display top 10
 ```
@@ -245,15 +268,33 @@ stargazer(head(dfProductRank,10), type="text", summary=FALSE, rownames=FALSE, di
 Overall, between the different uses (on or off-label) there was not much seperation in product ranking, and durability for an ultramarathon is definitely more important than cost. However, some products certainly cost more than others. It seems for general use, Good ol' petrolatum (petrolium jelly) is dirt cheap and works well. In the next section, we'll explore the relationship between the water based and oil based products to see if there are any signifigant differences.
 
 # Ingredient effect of product rating (Regression Analysis)
-Here we will look at the presence of products and possible interaction of ingredients to the product rating. Because "off-label" use may pollute the results (most of the reviews are not from sports use), they are not included. However, fortythree of the sixy procucts have ten or more reviews, so the sample size is good for doing this. 
+Here we will look at the presence of products and possible interaction of ingredients to the product rating. In order to hone the list down, we'll have to remove some of the products.
+
+Because "off-label" use may pollute the results (most of the reviews are not from sports use), they are not included. However, fortythree of the sixy procucts have ten or more reviews, so the sample size is good for doing this. 
+
+The sample size for non-"off-label" foot products is only 3, so that doesn't lend itself to stastical signifigance, so we'll ignore those too. 
+
+This leads to the question of cycling products versus running. Because the sports are different enough and the application to the chamios being an important component, we'll treat them seperately. While this is a running product study, it would be interesting to see them, as there is 11 products, which is enough to potentially lead to stastical signifigance.
 
 
+Starting with the only "sport" labeled running products only for general use on the body (labeled just for feet) to compare ingredients. Note that this gets rid ofthe standby of petrolium jelly as it is not labeled specifically for "sport" and again the ratings were not all made for that use specifically:
 ```{r}
 # Getting a subset of the merged product list with 10 or more reviews and a list with
-# no off-label use
-subProductsIngredientsTenPlusReviewsNoOffLabel <- subset(dfMergeProductIngredient, Reviews >=10 & Product_Audience !="Off-Label")
-subProductListTenPlusReviewsNoOffLabel <- subset(dfProduct, Reviews >=10 & Product_Audience !="Off-Label")
+# no off-label use and no 'feet' products
+
+# Starting with all running ingredients:
+subRunIngredients <- subset(dfMergeProductIngredient, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use =="General")
+
+# And a list of the running products:
+subRunProducts <- subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use =="General")
+nrow(subRunProducts)
 ```
+So there are a total of 22 products, which is a great sample size to look at just running products, twice that of biking ones. 
+
+We'll need to compare the ratings of both bike and run to see if one is rated signifigantly higher or lower. Then we can also use "water" as a treatment effect.
+
+
+
 
 Making a chord diagram to visualize relationships
 ```{r}
