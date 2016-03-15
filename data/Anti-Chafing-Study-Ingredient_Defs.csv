@@ -225,39 +225,38 @@ Ingredient_ID,Common_Ingredient_Name,Ingredient_Alternate_Name,Ingredient_Defini
 224,Stearoylethyl Dihydroxyethylamine,na,na,na,na,na
 225,Stearyl Alcohol,na,na,na,na,na
 226,Stearyl Glycrrhetinate,na,na,na,na,na
-227,Steric Acid,na,na,na,na,na
-228,Steroid Fraction Stigmasterol,na,na,na,na,na
-229,Sunflower Oil,Sunflower Seed Oil,na,na,na,na
-230,Sunflower Seed Wax,na,na,na,na,na
-231,Sweet Almond Oil,na,na,na,na,na
-232,Sweet Orange Peel Oil,na,na,na,na,na
-233,Synthetic Beeswax,na,na,na,na,na
-234,Talc,na,na,na,na,na
-235,Tapioca Starch,na,na,na,na,na
-236,Tea Tree Oil,Melaleuca Alternifolia (Tea Tree) Extract or Leaf Oil,Used for its antiseptic; analgesic and anti-bacterial properties; also aids in healing and soothing the skin.,https://www.dermalinstitute.com/us/library/glossary.html?l=M,3/6/2016,na
-237,Tolnaftate,na,na,na,na,na
-238,Tribehenin,na,na,na,na,na
-239,Triclosan,na,na,na,na,na
-240,Tricontanyl PVP,na,na,na,na,na
-241,Triethanolamine,TEA,Triethanolamine is a strongly alkaline substance used as surfactant and pH adjusting chemical. Function(s): Fragrance Ingredient; pH Adjuster; Surfactant - Emulsifying Agent; BUFFERING; ,http://www.ewg.org/skindeep/ingredient.php?ingred06=706639,3/5/2016,na
-242,Triglyceride,na,na,na,na,na
-243,Trimethylsiloxysilicate,na,na,na,na,na
-244,Trisiloxane,OCTAMETHYL- TRISILOXANE; OCTAMETHYLTRISILOXANE; OCTAMETHYLTRISILOXANE; OCTAMETHYLTRISILOXANE; TRISILOXANE; OCTAMETHYL; TRISILOXANE; OCTAMETHYL-,About TRISILOXANE: Trisiloxane is a linear siloxane. Function(s): Antifoaming Agent; Skin-Conditioning Agent - Miscellaneous; SKIN CONDITIONING,http://www.ewg.org/skindeep/ingredient/706714/TRISILOXANE/,3/5/2016,na
-245,Vanillin,na,na,https://pubchem.ncbi.nlm.nih.gov/compound/vanillin#section=Top,na,na
-246,Vitamin A,na,na,na,na,na
-247,Vitamin B5,na,na,na,na,na
-248,Vitamin B6,na,na,na,na,na
-249,Vitamin C,Tetrahexyldecyl Ascorbate,na,na,na,na
-250,Vitamin D3,na,na,na,na,na
-251,Vitamin E,Tocopheryl; Tocopherols; Tocopheryl Acetate Vitamin E Acetate; DL Alpha Tocopherol; Mixed Tocopherols,Tocopheryl acetate; also known as vitamin E acetate; is a common vitamin supplement with the molecular formula C31H52O3 (for 'α' form). It is the ester of acetic acid and tocopherol (vitamin E). It is often used indermatological products such as skin creams. Tocopheryl acetate is not oxidized and can penetrate through the skin to the living cells; where about 5% is converted to free tocopherol and provides beneficial antioxidant effects.,https://en.wikipedia.org/wiki/Tocopheryl_acetate,2/21/2016,na
-252,Vitamin K1,na,na,na,na,na
-253,Water,Aqua; Deionized Water,na,na,na,na
-254,Wheat Germ Oil,na,na,na,na,na
-255,White Oak Bark Extrack,na,na,na,na,na
-256,Willow Extract,Epilobium Angustifolium; Willow Herb; Willow Herb Flower/Leaf/Stem Extract,Epilobium angustifolium is a PERENNIAL growing to 2 m (6ft) by 1 m (3ft 3in) at a fast rate.,http://www.pfaf.org/user/plant.aspx?LatinName=Epilobium+angustifolium,2/21/2016,na
-257,Witch Hazel,na,na,na,na,na
-258,Xanthan Gum,na,na,na,na,na
-259,Yarrow,Achillea Millefolium,Achillea millefolium; commonly known as yarrow /ˈjæroʊ/ or common yarrow; is a flowering plant in the family Asteraceae. It is native to temperate regions of the Northern Hemisphere in Asia; Europe; and North America.[1] It has been introduced as a feed for live stock in places like New Zealand[2] and Australia. However; it is a weed in those places[2] and sometimes also in its native regions.[3],https://en.wikipedia.org/wiki/Achillea_millefolium,3/5/2016,na
-260,Zinc Acetate,na,na,na,na,na
-261,Zinc Oxide,Zinc Oxide (CI 77947),na,na,na,na
-262,Zinc Stearate,na,na,na,na,na
+227,Steroid Fraction Stigmasterol,na,na,na,na,na
+228,Sunflower Oil,Sunflower Seed Oil,na,na,na,na
+229,Sunflower Seed Wax,na,na,na,na,na
+230,Sweet Almond Oil,na,na,na,na,na
+231,Sweet Orange Peel Oil,na,na,na,na,na
+232,Synthetic Beeswax,na,na,na,na,na
+233,Talc,na,na,na,na,na
+234,Tapioca Starch,na,na,na,na,na
+235,Tea Tree Oil,Melaleuca Alternifolia (Tea Tree) Extract or Leaf Oil,Used for its antiseptic; analgesic and anti-bacterial properties; also aids in healing and soothing the skin.,https://www.dermalinstitute.com/us/library/glossary.html?l=M,3/6/2016,na
+236,Tolnaftate,na,na,na,na,na
+237,Tribehenin,na,na,na,na,na
+238,Triclosan,na,na,na,na,na
+239,Tricontanyl PVP,na,na,na,na,na
+240,Triethanolamine,TEA,Triethanolamine is a strongly alkaline substance used as surfactant and pH adjusting chemical. Function(s): Fragrance Ingredient; pH Adjuster; Surfactant - Emulsifying Agent; BUFFERING; ,http://www.ewg.org/skindeep/ingredient.php?ingred06=706639,3/5/2016,na
+241,Triglyceride,na,na,na,na,na
+242,Trimethylsiloxysilicate,na,na,na,na,na
+243,Trisiloxane,OCTAMETHYL- TRISILOXANE; OCTAMETHYLTRISILOXANE; OCTAMETHYLTRISILOXANE; OCTAMETHYLTRISILOXANE; TRISILOXANE; OCTAMETHYL; TRISILOXANE; OCTAMETHYL-,About TRISILOXANE: Trisiloxane is a linear siloxane. Function(s): Antifoaming Agent; Skin-Conditioning Agent - Miscellaneous; SKIN CONDITIONING,http://www.ewg.org/skindeep/ingredient/706714/TRISILOXANE/,3/5/2016,na
+244,Vanillin,na,na,https://pubchem.ncbi.nlm.nih.gov/compound/vanillin#section=Top,na,na
+245,Vitamin A,na,na,na,na,na
+246,Vitamin B5,na,na,na,na,na
+247,Vitamin B6,na,na,na,na,na
+248,Vitamin C,Tetrahexyldecyl Ascorbate,na,na,na,na
+249,Vitamin D3,na,na,na,na,na
+250,Vitamin E,Tocopheryl; Tocopherols; Tocopheryl Acetate Vitamin E Acetate; DL Alpha Tocopherol; Mixed Tocopherols,Tocopheryl acetate; also known as vitamin E acetate; is a common vitamin supplement with the molecular formula C31H52O3 (for 'α' form). It is the ester of acetic acid and tocopherol (vitamin E). It is often used indermatological products such as skin creams. Tocopheryl acetate is not oxidized and can penetrate through the skin to the living cells; where about 5% is converted to free tocopherol and provides beneficial antioxidant effects.,https://en.wikipedia.org/wiki/Tocopheryl_acetate,2/21/2016,na
+251,Vitamin K1,na,na,na,na,na
+252,Water,Aqua; Deionized Water,na,na,na,na
+253,Wheat Germ Oil,na,na,na,na,na
+254,White Oak Bark Extrack,na,na,na,na,na
+255,Willow Extract,Epilobium Angustifolium; Willow Herb; Willow Herb Flower/Leaf/Stem Extract,Epilobium angustifolium is a PERENNIAL growing to 2 m (6ft) by 1 m (3ft 3in) at a fast rate.,http://www.pfaf.org/user/plant.aspx?LatinName=Epilobium+angustifolium,2/21/2016,na
+256,Witch Hazel,na,na,na,na,na
+257,Xanthan Gum,na,na,na,na,na
+258,Yarrow,Achillea Millefolium,Achillea millefolium; commonly known as yarrow /ˈjæroʊ/ or common yarrow; is a flowering plant in the family Asteraceae. It is native to temperate regions of the Northern Hemisphere in Asia; Europe; and North America.[1] It has been introduced as a feed for live stock in places like New Zealand[2] and Australia. However; it is a weed in those places[2] and sometimes also in its native regions.[3],https://en.wikipedia.org/wiki/Achillea_millefolium,3/5/2016,na
+259,Zinc Acetate,na,na,na,na,na
+260,Zinc Oxide,Zinc Oxide (CI 77947),na,na,na,na
+261,Zinc Stearate,na,na,na,na,na
