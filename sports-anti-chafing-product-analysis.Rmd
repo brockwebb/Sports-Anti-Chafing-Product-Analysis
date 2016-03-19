@@ -285,43 +285,107 @@ Starting with the only "sport" labeled running products only for general use on 
 # Starting with all running ingredients:
 subRunIngredients <- subset(dfMergeProductIngredient, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use =="General")
 
-# And a list of the running products:
+# Getting the list of Bike ingredients
+subBikeIngredients <- subset(dfMergeProductIngredient, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use =="Groin")
+
+# A List of the running products:
 subRunProducts <- subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use =="General")
+
+# A list of the bike products
+subBikeProducts <- subset(dfProduct, Reviews >=10 & Product_Audience =="Sport" & Product_Specific_Use =="Groin")
+
 nrow(subRunProducts)
+nrow(subBikeProducts)
 ```
 So there are a total of 22 products, which is a great sample size to look at just running products, twice that of biking ones. 
 
-We'll need to compare the ratings of both bike and run to see if one is rated signifigantly higher or lower. Then we can also use "water" as a treatment effect.
+We'll need to compare the ratings of both bike and run to see if one is rated signifigantly higher or lower. To do this, a non-parametric test that doesn't assume any "shape" in the data is a good choice. 
+
+```{r}
+a1 <- c("wilcox.test p-value:",wilcox.test(subRunProducts$Score,subBikeProducts$Score)$p.value)
+
+a1 #display results
+```
+The p-value was 0.401, which means that there is no signifigant difference between the bike product ratings and the running ones. If the p-value was less than 0.05 then we would say they are. Due to the differences between sport and use (application area and method) we can treat both groups independently to see if there are ingredient groups that might have an effect on the product rating.
+
+We'll need to look at the running and biking ingredients again based on the subset we just created:
+```{r}
+# Running
+dfRunIngredientCounts <- as.data.frame(table(subRunIngredients$Common_Ingredient_Name))
+colnames(dfRunIngredientCounts) <- c("Common_Ingredient_Name","Count")
+dfRunIngredientCounts <- dfRunIngredientCounts[order(-dfRunIngredientCounts$Count),]
+
+# Biking
+dfBikeIngredientCounts <- as.data.frame(table(subBikeIngredients$Common_Ingredient_Name))
+colnames(dfBikeIngredientCounts) <- c("Common_Ingredient_Name","Count")
+dfBikeIngredientCounts <- dfBikeIngredientCounts[order(-dfBikeIngredientCounts$Count),]
+
+```
+
+There are 54 ingredients that are used more than once in the 22 products.
+Top 20 running product ingredients:
+```{r}
+stargazer(head(dfRunIngredientCounts,20), type="text", summary=FALSE, rownames=FALSE)  # Display top 20 ingredients used
+```
+
+There are 39 ingredients appearing more that once in the 11 biking products. 
+
+Top 20 biking product ingredients:
+```{r}
+stargazer(head(dfBikeIngredientCounts,20), type="text", summary=FALSE, rownames=FALSE)  # Display top 20 ingredients used
+```
+
+Dimethicone is a skin protectant and appears in 10 of the 22 products. Let's get a list of those with and without dimethicone.
+```{r}
+d1 <- subset(subRunIngredients, Common_Ingredient_Name == "Dimethicone")
+d2 <- merge(subRunProducts,d1,by="Product_ID", all.x=FALSE)
+#d3 <- subset(subRunProducts, subRunProducts$Product_ID == d1$Product_ID)
+```
 
 
+
+
+```{r}
+#Non-parametric comparrison
+#a1 <- c("wilcox.test p-value:",wilcox.test(subRunProducts$Score,subBikeProducts$Score)$p.value)
+
+#a1 #display results
+```
 
 
 Making a chord diagram to visualize relationships
 ```{r}
-# Uses Libraries
-#library(circlize) (need to put these in the init section later)
-#library(reshape)
+# Uses Libraries(need to put these in the init section later)
+library(circlize) 
+library(reshape)
+```
 
+```{r}
 # First we must view each product has having a destination to each ingredient
 # If a product has an ingredient, it's amount is "1" and if it
 # does not have an ingredient, then it's relationship is "0"
 
 # Get a subset of products with their ingredients only
-tsub1 <- subset(subProductsIngredientsTenPlusReviewsNoOffLabel, select=c(Product, Common_Ingredient_Name))
+t1 <- subset(dfRunIngredientCounts, Count>2)
+t2 <- merge(subRunIngredients,t1,by="Common_Ingredient_Name", all.x=FALSE)
 
 # This makes a table of all prodcuts in rows, all ingredients in the columns
 # where a "1" means 'true' or it has that ingredient, a '0' for false or 
 # it does not contain it...
-tsub2 <- cast(tsub1, Product ~ Common_Ingredient_Name)
+t3 <- cast(t2, Product ~ Common_Ingredient_Name)
 
 # Convert the table to matrix and delete the first column
-tsub3 <- data.matrix(subset(tsub2, select = -c(1)))
+t4 <- data.matrix(subset(t3, select = -c(1)))
 
 # set Matrix Row and Column names
-rownames(tsub3) <- tsub2$Product
-colnames(tsub3) <- colnames(tsub3)
+rownames(t4) <- t3$Product
+colnames(t4) <- colnames(t4)
 
-#chordDiagram(tsub3)
+#The chord diagram take a while to construct. Cool looking, but didn't find very useful afterall.
+#chordDiagram(t4)
+
+#Another plot just to look. Not effective.
+#ggplot(t2, aes(x=Score, y=Score, color=as.factor(Common_Ingredient_Name))) + geom_point(shape=1)
 
 ```
 # Ingredient cluster analysis
