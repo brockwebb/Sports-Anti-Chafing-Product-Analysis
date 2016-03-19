@@ -337,13 +337,43 @@ stargazer(head(dfBikeIngredientCounts,20), type="text", summary=FALSE, rownames=
 
 Dimethicone is a skin protectant and appears in 10 of the 22 products. Let's get a list of those with and without dimethicone.
 ```{r}
+# Check out an ingredient 
 d1 <- subset(subRunIngredients, Common_Ingredient_Name == "Dimethicone")
-d2 <- merge(subRunProducts,d1,by="Product_ID", all.x=FALSE)
-#d3 <- subset(subRunProducts, subRunProducts$Product_ID == d1$Product_ID)
+
+# This is a dirty trick and probably not good for very large data sets. It will append columns and if 
+# it was not in the list, it will get an "NA" value... I can subdet data arrays to compare scores using this 
+# as a filter...
+d2 <- merge(subRunProducts,d1,by="Product_ID", all.x=TRUE)
+
+#Ingredient containing set
+a1 <- subset(d2$Score.x, is.na(d2$Product.y)==0)
+
+# Non ingredient containing product set
+a2 <- subset(d2$Score.x, is.na(d2$Product.y)==1)
+
+#And the momement of truth... does dimethicone make a difference?
+p1 <- c("Dimethicone; wilcox.test p-value:",wilcox.test(a1,a2)$p.value)
+p1 #display results
+
+d1 <- subset(subRunIngredients, Common_Ingredient_Name == "Petrolatum")
+d2 <- merge(subRunProducts,d1,by="Product_ID", all.x=TRUE)
+
+a1 <- subset(d2$Score.x, is.na(d2$Product.y)==0)
+a2 <- subset(d2$Score.x, is.na(d2$Product.y)==1)
+
+p1 <- c("Petrolatium; wilcox.test p-value:",wilcox.test(a1,a2)$p.value)
+p1 #display results
+
+
 ```
 
 
+Look to see if cream/ointment/solid etc has a better/worse product rating
+```{r}
 
+ggplot(dfProduct, aes(x=Score, y=Score, color=as.factor(Product_Type))) + geom_point(shape=5)
+
+```
 
 ```{r}
 #Non-parametric comparrison
