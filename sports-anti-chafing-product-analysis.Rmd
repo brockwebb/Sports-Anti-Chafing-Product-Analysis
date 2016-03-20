@@ -168,7 +168,12 @@ Breaking things down as a whole, lets look at the total number of different ingr
 # and do the counts as the number of ingredients (this is a simple way)
 dfProductCounts <- as.data.frame(table(dfMergeProductIngredient$Product))
 colnames(dfProductCounts) <- c("Product","Number_of_Ingredients")
+dfProductCounts$Product_ID <- rownames(dfProductCounts)
 dfProductCounts <- dfProductCounts[order(-dfProductCounts$Number_of_Ingredients),]
+
+d1 <- merge(dfProductCounts, dfProduct, by="Product_ID")
+ggplot(d1, aes(x=Number_of_Ingredients, y=Score, color=as.factor(Product_Specific_Use))) + geom_point(shape=5)
+
 ```
 
 The top five products with the most ingredients are (last two are a tie):
@@ -342,7 +347,7 @@ d1 <- subset(subRunIngredients, Common_Ingredient_Name == "Dimethicone")
 
 # This is a dirty trick and probably not good for very large data sets. It will append columns and if 
 # it was not in the list, it will get an "NA" value... I can subdet data arrays to compare scores using this 
-# as a filter...
+# as a filter... For really large data sets probaly be best to drop a bunch of columns... 
 d2 <- merge(subRunProducts,d1,by="Product_ID", all.x=TRUE)
 
 #Ingredient containing set
@@ -355,17 +360,144 @@ a2 <- subset(d2$Score.x, is.na(d2$Product.y)==1)
 p1 <- c("Dimethicone; wilcox.test p-value:",wilcox.test(a1,a2)$p.value)
 p1 #display results
 
-d1 <- subset(subRunIngredients, Common_Ingredient_Name == "Petrolatum")
+
+# Vitiman E is the number one ingredient found, so let's check it out next:
+d1 <- subset(subRunIngredients, Ingredient_ID == 252)
 d2 <- merge(subRunProducts,d1,by="Product_ID", all.x=TRUE)
 
 a1 <- subset(d2$Score.x, is.na(d2$Product.y)==0)
 a2 <- subset(d2$Score.x, is.na(d2$Product.y)==1)
 
-p1 <- c("Petrolatium; wilcox.test p-value:",wilcox.test(a1,a2)$p.value)
+p1 <- c("Water; wilcox.test p-value:",wilcox.test(a1,a2)$p.value)
 p1 #display results
+```
+One question is Petrolatium with Beeswax and Dimethicone. Seems like a good ultra combination, and also is used in Trail Toes. Also, Allentoin might be in there, but starting simple to see about combos.
+```{r}
+# Getting Petrolatium, Beeswax, and Dimethicone
+d1 <- subset(subRunIngredients, Ingredient_ID == 81 | Ingredient_ID==18) #Ingredient_ID==174 is Petrolatium.
+d2 <- merge(subRunProducts,d1,by="Product_ID", all.x=TRUE)
+
+d3 <- subset(d2, !duplicated(d2[,1])) 
+a1 <- subset(d3$Score.x, is.na(d2$Product.y)==0)
+a2 <- subset(d3$Score.x, is.na(d2$Product.y)==1)
+
+p1 <- c("wilcox.test p-value:",wilcox.test(a1,a2)$p.value)
+p1 #display results
+```
+After trying a set of ingredients, no luck. In most cases only one or two contain both, but not all three in the general running list.. and so the sample size is a bit small. Maybe other approaches will become apparent to uncover group effects.
+
+This could get tedious to test everything one at a time, so let us focus on ingredients where there are 3 or more (that would be 3/22 products) for the running set. To do this, we'll create a function to go through and test every ingredient.
+```{r}
+
+i3 <- subset(dfRunIngredientCounts, Count>2)
+#The grid view the row name happens to be the product ID, just to preserve it, better for merging data frames later...
+i3$Ingredient_ID <- rownames(i3) 
+
+for (i in 1:nrow(i3)){
+
+     d1 <- subset(subRunIngredients, Ingredient_ID==i3$Ingredient_ID[i])
+     d2 <- merge(subRunProducts,d1,by="Product_ID", all.x=TRUE)
+
+     a1 <- subset(d2$Score.x, is.na(d2$Product.y)==0)
+     a2 <- subset(d2$Score.x, is.na(d2$Product.y)==1)
+
+     p1 <- c(i3$Common_Ingredient_Name[i],"wilcox.test p-value:", wilcox.test(a1,a2)$p.value)
+ 
+     p <- rbind(p,p1)
+     
+  
+   }
+
+#display results  
+colnames(p) <- c("Ingredient_ID","Stat. Test", "p_val")
+p2 <- merge(i3, p, by="Ingredient_ID", all.x=TRUE)
+p2 <- p2[order(-p2$Count),]
+stargazer(p2, type="text", title="Running Product Ingredient effect on Rating", summary=FALSE, rownames=FALSE)
+
+p <- NULL #free up this table... 
+```
+
+Looking at all the P values, none are less than 0.05, so nothing is signifigant. We can repeat this for the cycling products.
+
+
+Those are:
+```{r}
+
+i3 <- subset(dfBikeIngredientCounts, Count>2)
+#The grid view the row name happens to be the product ID, just to preserve it, better for merging data frames later...
+i3$Ingredient_ID <- rownames(i3) 
+
+for (i in 1:nrow(i3)){
+
+     d1 <- subset(subBikeIngredients, Ingredient_ID==i3$Ingredient_ID[i])
+     d2 <- merge(subBikeProducts,d1,by="Product_ID", all.x=TRUE)
+
+     a1 <- subset(d2$Score.x, is.na(d2$Product.y)==0)
+     a2 <- subset(d2$Score.x, is.na(d2$Product.y)==1)
+
+     p1 <- c(i3$Common_Ingredient_Name[i],"wilcox.test p-value:", wilcox.test(a1,a2)$p.value)
+ 
+     p <- rbind(p,p1)
+  
+   }
+
+#display results  
+colnames(p) <- c("Ingredient_ID","Stat. Test", "p_val")
+p2 <- merge(i3, p, by="Ingredient_ID", all.x=TRUE)
+p2 <- p2[order(-p2$Count),]
+stargazer(p2, type="text", title="Biking Product Ingredient effect on Rating", summary=FALSE, rownames=FALSE)
+
+p <- NULL #free up this table... 
+```
+
+
+It may be more than one product combined. Without knowing exactly how to go about that right now, a good exploring method is to look at the ingredients in the top and bottom three from out list of 22 running products.
+
+```{r}
+# Sort the running product list then take top 3 and bottom three products
+p$Product_ID <-subRunProducts$Product_ID
+p$Product <-subRunProducts$Product
+p$Score   <- subRunProducts$Score
+
+p <- as.data.frame(p)
+p <- p[order(-p$Score),]
+p <- rbind(head(p,3), tail(p,3))
+
+stargazer(p, type="text", summary=FALSE, title = "Top and Bottom Run Products")
+
+
+#now to get the ingredients... each set from the top and bottom.
+p1 <- merge(head(p,3),subRunIngredients, by = "Product_ID", all.x=FALSE)
+p2 <- merge(tail(p,3),subRunIngredients, by = "Product_ID", all.x=FALSE)
+
+#Now to create a list of each...
+#library(VennDiagram)
+#v1 <- list(A=p1$Common_Ingredient_Name, B=p2$Common_Ingredient_Name)
+#venn.diagram(v1, filename ="1.tiff", height = 1000, width = 1000)
+
+# According to the Venn Diagram, there are eight common ingredients... I thought the diagram would be cooler but its lame.
+
+p3 <- merge(p1,p2, by = "Ingredient_ID", all.x =FALSE)
+
+
+p1counts <- as.data.frame(table(p1$Common_Ingredient_Name))
+colnames(p1counts) <- c("Ingredient","Product_Count")
+p1counts <- subset(p1counts, Product_Count >0)
+
+p2counts <- as.data.frame(table(p2$Common_Ingredient_Name))
+colnames(p2counts) <- c("Ingredient","Product_Count")
+p2counts <- subset(p2counts, Product_Count >0)
+
+p3counts <- merge(p1counts,p2counts, by="Ingredient", all = TRUE)
+
+p<- NULL
+
 
 
 ```
+
+
+
 
 
 Look to see if cream/ointment/solid etc has a better/worse product rating
